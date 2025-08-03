@@ -1,6 +1,21 @@
 import React from "react";
 import ContactFrom from "../components/contact/ContactForm";
 
+
+export const metadata = constructMetadata({
+  title: "Contact Us - Get in Touch for IT Solutions",
+  description: "Contact TechSolutions Pro for your IT needs. Reach out to our expert team for consultations, support, or to discuss your next technology project. Multiple ways to connect.",
+  keywords: [
+    "contact us",
+    "IT consultation",
+    "get quote",
+    "technical support",
+    "business inquiry",
+    "project discussion"
+  ],
+  canonicalUrl: "https://yourdomain.com/contact"
+})
+
 const page = () => {
     return (
         <div className=" text-white font-sans flex flex-col pb-32">

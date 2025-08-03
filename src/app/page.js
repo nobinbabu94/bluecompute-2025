@@ -1,5 +1,25 @@
+import Head from "next/head";
 import Image from "next/image";
+import { constructMetadata } from "./metadata";
 
+export const metadata = constructMetadata({
+  title: "BlueCompute | Cloud Solutions to Drive Digital Transformation.",
+  description: "Helping organizations to achieve complete control and flexibility over their cloud environment",
+  keywords: [
+    "IT solutions",
+    "technology services",
+    "digital transformation",
+    "software development",
+    "cloud computing",
+    "IT consulting",
+    "business technology",
+    "pdf to pog",
+    "pdf to planogram",
+    "category management",
+    "revealnext",
+  ],
+  canonicalUrl: "https://bluecompute.com"
+})
 export default function Home() {
   const services = [
     {
@@ -31,6 +51,14 @@ export default function Home() {
   ]
   return (
     <div className=" text-white font-sans flex flex-col pb-32">
+      <Head>
+        <title>Bluecompute</title>
+        <link
+          rel="canonical"
+          href="https://bluecompute.com/"
+          key="canonical"
+        />
+      </Head>
       <section className="flex justify-between w-full min-h-screen h-screen bg-black px-4">
         <div className="flex flex-col w-[50%] h-full items-center justify-center">
           <h1 className="text-6xl max-w-2xl">
