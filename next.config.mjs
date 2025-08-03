@@ -1,15 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Enable static export for Netlify
   output: 'export',
   trailingSlash: true,
   images: {
-    unoptimized: true, // Required for static export
+    unoptimized: true,
   },
-  // Optional: Enable experimental features
-  experimental: {
-    optimizeCss: true,
-  },
+  // Remove any experimental features that might cause issues
 }
 
 export default nextConfig
