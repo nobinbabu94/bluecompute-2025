@@ -12,6 +12,9 @@ const Navbar = () => {
 
     const pathname = usePathname();
 
+    console.log(pathname);
+    
+
     const handleScroll = useCallback(() => {
         setIsScrolled(window.scrollY > 50);
     }, []);
@@ -105,11 +108,12 @@ const Navbar = () => {
                                     }`}></span>
                             </div>
                         </Link> */}
-                        <Link href={'/contact'} title="Contact Bluecompute">
-                            <div className={`cursor-pointer relative   group py-2 px-3 transition-all duration-200 ${pathname === '/contact' ? 'text-blue-500 font-semibold ' : 'text-white'
-                                }`}>
+                      <Link href='/contact/' title='Home Bluecompute'
+                            className={`cursor-pointer relative   group py-2 px-3 transition-all duration-200 ${pathname === '/contact/' ? 'text-blue-500 font-semibold ' : 'text-white'
+                                }`}
+                        >
                                 Contact
-                            </div>
+                     
                         </Link> 
                     </div>
                      <CalendlyModal />
@@ -187,10 +191,10 @@ const Navbar = () => {
                                     )}
                                 </div>
                             </Link> */}
-                            <Link href={'/contact'} title="Contact Bluecompute" onClick={closeMobileMenu}>
+                            <Link href={'/contac/'} title="Contact Bluecompute" onClick={closeMobileMenu}>
                                 <div className={`group px-6 py-4 rounded-2xl transition-all duration-300 
                                 flex items-center hover:bg-white/80 hover:shadow-lg hover:scale-[1.02] 
-                                ${pathname === '/contact' ? 'bg-violet-100/70 text-blue-700 shadow-md' : 'text-gray-700'
+                                ${pathname === '/contact/' ? 'bg-violet-100/70 text-blue-700 shadow-md' : 'text-gray-700'
                                     }`}>
                                     <div className="flex items-center justify-center w-10 h-10 rounded-xl 
                                     bg-gradient-to-br from-[#1a1a2e] to-[#0f0f23] text-white mr-4 
@@ -203,7 +207,7 @@ const Navbar = () => {
                                         <div className="font-semibold text-md">Contact</div>
                                         <div className="text-sm text-gray-500">Get in touch</div>
                                     </div>
-                                    {pathname === '/contact' && (
+                                    {pathname === '/contact/' && (
                                         <div className="ml-auto w-2 h-2 bg-[#1a1a2e] rounded-full animate-pulse"></div>
                                     )}
                                 </div>
