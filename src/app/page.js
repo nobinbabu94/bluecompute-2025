@@ -175,7 +175,7 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className="flex flex-col bg-black justify-center items-center w-full px-4 mt-32 py-32 rounded-xl ">
+      <section className="flex flex-col bg-black justify-center items-center w-full px-4 mt-32 py-32 rounded-4xl ">
         <h3 className="text-4xl  font-semibold ">
           Get early access
         </h3>

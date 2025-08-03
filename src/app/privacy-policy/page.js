@@ -3,11 +3,11 @@ import React from "react";
 const page = () => {
     return (
         <div className=" text-white font-sans flex flex-col pb-32">
-            <section className="flex flex-col justify-center items-center w-full min-h-screen h-screen bg-black px-4">
+            <section className="relative flex flex-col justify-center items-center w-full  h-[88vh] bg-black px-4">
                 <h1 className="text-6xl ">
                     Privacy Policy
                 </h1>
-                <div className="flex flex-col items-center justify-center mt-8 animate-bounce">
+                 <div className="absolute bottom-4 flex flex-col items-center justify-center mt-8 animate-bounce">
                     <span className="text-sm text-blue-400">Scroll down</span>
                     <svg
                         className="w-6 h-6 text-blue-400 mt-1"
