@@ -1,5 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "./components/navbar/Navbar";
+import Footer from "./components/navbar/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,10 +21,33 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="canonical" href="https://bluecompute.com/" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="Bluecompute" />
+        {/* <JsonLd /> */}
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={` antialiased`}
       >
-        {children}
+        <main className=" w-full  mt-20">
+          <Navbar />
+          {/* <div
+            className={`lg:z-40 z-40  md:right-0 md:-top-full  lg:-top-96 md:pr-2 md:flex items-center justify-center 
+                    }`}
+            style={{
+              transition: 'opacity 1s ease-in-out', 
+            }}
+          >
+          </div> */}
+
+          <div className="">
+            {children}
+          </div>
+          <Footer />
+        </main>
       </body>
     </html>
   );

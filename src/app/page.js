@@ -1,103 +1,168 @@
 import Image from "next/image";
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const services = [
+    {
+      // icon: <FaHome size={40} />,
+      title: 'Category Management',
+      description: ' Optimize product assortments and shelf layouts to align with shopper behavior',
+    },
+    {
+      // icon: <FaBroom size={40} />,
+      title: 'Space Planning & Analysis',
+      description: 'Maximize shelf efficiency and improve product visibility through intelligent planogram compliance',
+    },
+    {
+      // icon: <FaTruckMoving size={40} />,
+      title: 'Retail Execution',
+      description: 'Real-time tracking of merchandising standards, pricing accuracy, and stock availability',
+    },
+    {
+      // icon: <FaTruckMoving size={40} />,
+      title: 'In-Store Audits',
+      description: 'Automated insights with image-based analytics for fast, consistent store checks',
+    },
+    {
+      // icon: <FaTruckMoving size={40} />,
+      title: 'Competitive Benchmarking',
+      description: 'Understand and outperform competition with real-time market data',
+    }
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  ]
+  return (
+    <div className=" text-white font-sans flex flex-col pb-32">
+      <section className="flex justify-between w-full min-h-screen h-screen bg-black px-4">
+        <div className="flex flex-col w-[50%] h-full items-center justify-center">
+          <h1 className="text-6xl max-w-2xl">
+            A smarter approach to- category management
+          </h1>
+
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <div className="flex flex-col w-[50%] h-full items-center justify-center ">
+
+
+        </div>
+
+      </section>
+      <section className="flex flex-col  items-center w-full px-4 pt-32">
+        <h3 className="text-4xl font-semibold text-gray-800 ">
+          Proudly Trusted by Top Retail Stores Around You
+        </h3>
+        <div className="w-full flex justify-center gap-x-6 gap-y-16 pt-24 flex-wrap">
           <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            src={'/Coca-Cola_logo.svg'}
+            width={200}
+            height={200}
+            alt='Filetext icon'
+            className='py-2 border border-gray-300 rounded-full'
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
           <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+            src={'/The_Boston_Beer_Company_Inc.svg'}
+            width={250}
+            height={250}
+            alt='Filetext icon'
+            className='py-2 p-6 border border-gray-300 rounded-full'
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
           <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
+            src={'/ocrolus.svg'}
+            width={250}
+            height={250}
+            alt='Filetext icon'
+            className='py-2 p-6 border border-gray-300 rounded-full'
           />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          <Image
+            src={'/vitaclay.svg'}
+            width={250}
+            height={400}
+            alt='Filetext icon'
+            className='py-2 p-6 border border-gray-300 rounded-full'
+          />
+
+        </div>
+      </section>
+
+      <section className="flex flex-col justify-center items-center w-full px-4 pt-32 rounded-xl">
+        <h3 className="text-4xl font-semibold text-gray-800 ">
+          Why Choose us ?
+        </h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 place-items-center pt-24">
+
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="bg-gray-900 text-white p-6 w-full text-center rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 h-full"
+            >
+              {/* <div className="flex justify-center mb-4 text-orange-500">{service.icon}</div> */}
+              <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
+              <p className="text-gray-300">{service.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="flex flex-col justify-center items-center w-full px-4 pt-32 rounded-xl">
+        <h3 className="text-4xl font-semibold text-gray-800 ">OUR EXPERTISE</h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 place-items-center pt-24">
+
+          <Image
+            src={'/four-azure.svg'}
+            width={200}
+            height={200}
+            alt='Filetext icon'
+            className='py-2 p-6 rounded-full'
+          />
+          <Image
+            src={'/four-docker.svg'}
+            width={250}
+            height={250}
+            alt='Filetext icon'
+            className='py-2 p-6 rounded-full'
+          />
+          <Image
+            src={'/four-gcp.svg'}
+            width={200}
+            height={200}
+            alt='Filetext icon'
+            className='py-2 p-6 rounded-full'
+          />
+          <Image
+            src={'/four-kubernetes.svg'}
+            width={200}
+            height={200}
+            alt='Filetext icon'
+            className='py-2 p-6 rounded-full'
+          />
+        </div>
+      </section>
+      <section className="flex justify-around items-center w-full px-4 pt-32 ">
+        <div className="flex flex-col justify-start">
+          <h3 className="text-4xl max-w-md font-semibold text-gray-800 ">
+            Powerful Features for Modern Retail
+          </h3>
+        </div>
+        <div className="flex rounded-xl">
+          <img
+            src="/category-management.webp"
+            className="w-96 rounded-xl"
+          />
+        </div>
+      </section>
+      <section className="flex flex-col bg-black justify-center items-center w-full px-4 mt-32 py-32 rounded-xl ">
+        <h3 className="text-4xl  font-semibold ">
+          Get early access
+        </h3>
+        <p className="text-lg ">Sign up your team today to be the first to try out our new product to increase your team’s productivity
+        </p>
+        <form className="flex gap-4 py-6">
+          <input
+            placeholder="Your Email"
+            className="h-10 w-96 border-white border p-4"
+          />
+          <button className="border px-4">
+            Signup
+          </button>
+        </form>
+      </section>
     </div>
   );
 }
