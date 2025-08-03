@@ -29,36 +29,34 @@ export default function RootLayout({ children }) {
         <meta name="theme-color" content="#000000" />
         <meta name="msapplication-TileColor" content="#000000" />
         <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Bluecompute",
-              "url": "https://bluecompute.com",
-              "logo": "https://bluecompute.com/logo.png",
-              "description": "Leading IT solutions provider offering innovative technology services",
-              "address": {
-                "@type": "PostalAddress968 NORFOLK SQ Norfolk  VA , 23502 ",
-                "streetAddress": "4643 Holycon Circle San Jose CA.",
-                "addressLocality": "Holycon Circle",
-                "addressRegion": "San Jose ",
-                "postalCode": "95136",
-                "addressCountry": "US"
-              },
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "408-242-0283",
-                "contactType": "customer service"
-              },
-              "sameAs": [
-                // "https://twitter.com/yourcompany",
-                "https://linkedin.com/company/bluecomputeltd",
-                // "https://github.com/yourcompany"
-              ]
-            })
-          }}
-        />
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Bluecompute", // ← Change this to your actual company name
+      "url": "https://bluecompute.com",
+      "logo": "https://bluecompute.com/logo.png",
+      "description": "Leading IT solutions provider offering innovative technology services",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "4643 Holycon Circle", // ← Fixed: removed the extra text
+        "addressLocality": "San Jose",
+        "addressRegion": "CA",
+        "postalCode": "95136",
+        "addressCountry": "US"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "408-242-0283",
+        "contactType": "customer service"
+      },
+      "sameAs": [
+        "https://linkedin.com/company/bluecomputeltd"
+      ]
+    })
+  }}
+/>
       </head>
       <body
         className={` antialiased`}
