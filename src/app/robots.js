@@ -1,4 +1,4 @@
-import { MetadataRoute } from 'next'
+export const dynamic = 'force-static'
 
 export default function robots() {
   return {
@@ -7,6 +7,6 @@ export default function robots() {
       allow: '/',
       disallow: ['/private/', '/admin/'],
     },
-    sitemap: 'https://bluecompute.com/sitemap.xml',
+    sitemap: 'https://yourdomain.com/sitemap.xml',
   }
 }

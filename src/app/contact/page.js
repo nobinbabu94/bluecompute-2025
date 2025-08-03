@@ -1,5 +1,6 @@
 import React from "react";
 import ContactFrom from "../components/contact/ContactForm";
+import { constructMetadata } from "../metadata";
 
 
 export const metadata = constructMetadata({
@@ -13,7 +14,7 @@ export const metadata = constructMetadata({
     "business inquiry",
     "project discussion"
   ],
-  canonicalUrl: "https://yourdomain.com/contact"
+  canonicalUrl: "https://bluecompute.com/contact"
 })
 
 const page = () => {
