@@ -1,5 +1,4 @@
-'use client'
-import React, { useState } from 'react';
+
 
 const encode = (data) => {
     return Object.keys(data)
@@ -8,37 +7,10 @@ const encode = (data) => {
 };
 
 const ContactFormNet = () => {
-    const [formState, setFormState] = useState({
-        name: '',
-        email: '',
-        phone: '',
-        company: '',
-        message: ''
-    });
-
-    const handleChange = (e) => {
-        setFormState({
-            ...formState,
-            [e.target.name]: e.target.value
-        });
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-
-        fetch('/', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: encode({ 'form-name': 'contact', ...formState })
-        })
-            .then(() => alert('Success!'))
-            .catch((error) => alert(error));
-    };
-
-    const { name, email, phone, company, message } = formState;
+   
 
     return (
-        <form onSubmit={handleSubmit} name="contact" data-netlify="true"
+        <form name="contact" data-netlify="true"
             data-netlify-recaptcha="true" method="POST"
             className="w-[80%] px-6 py-8 md:py-16  flex flex-col items-center bg-gray-200 rounded-xl">
             <h3 className="text-2xl text-gray-800  font-bold">Fill The Contact Form</h3>
@@ -49,19 +21,19 @@ const ContactFormNet = () => {
                 <input type="hidden" name="form-name" value="contact" />
                 <input className="px-3 py-2 text-gray-500 border border-gray-200 focus:outline-1 outline-gray-500 rounded-md"
                     placeholder="Name"
-                    type="text" name="name" value={name} onChange={handleChange}
+                    type="text" name="name" 
                 />
                 <input className="px-3 py-2 text-gray-500 border border-gray-200 focus:outline-1 outline-gray-500 rounded-md"
                     placeholder="Email"
-                    type="email" name="email" value={email} onChange={handleChange}
+                    type="email" name="email"
                 />
                 <input className="px-3 py-2 text-gray-500 border border-gray-200 focus:outline-1 outline-gray-500 rounded-md"
                     placeholder="Phone Number"
-                    type="phone" name="phone" value={phone} onChange={handleChange}
+                    type="phone" name="phone"
                 />
                 <input className="px-3 py-2 text-gray-500 border border-gray-200 focus:outline-1 outline-gray-500 rounded-md"
                     placeholder="Company Name"
-                    type="company" name="company" value={company} onChange={handleChange}
+                    type="company" name="company"
                 />
 
                 {/* <input className="px-3 py-2 border rounded-md"
@@ -70,7 +42,7 @@ const ContactFormNet = () => {
             </div>
             <div className="w-full grid grid-cols-1 sm:grid-cols-1 ">
                 <textarea className="px-3 py-2 text-gray-500 border border-gray-200 focus:outline-1 outline-gray-500 rounded-md w-full h-32 resize-y"
-                    type="message" name="message" value={message} onChange={handleChange}
+                    type="message" name="message"
                     placeholder="How can we help you?" />
                 <div data-netlify-recaptcha="true"></div>
             </div>
@@ -83,27 +55,7 @@ const ContactFormNet = () => {
                 </button>
             </div>
         </form>
-        // <form onSubmit={handleSubmit} name="contact" data-netlify="true">
-        //     <input type="hidden" name="form-name" value="contact" />
-        //     <p>
-        //         <label>
-        //             Your Name: <input type="text" name="name" value={name} onChange={handleChange} />
-        //         </label>
-        //     </p>
-        //     <p>
-        //         <label>
-        //             Your Email: <input type="email" name="email" value={email} onChange={handleChange} />
-        //         </label>
-        //     </p>
-        //     <p>
-        //         <label>
-        //             Message: <textarea name="message" value={message} onChange={handleChange} />
-        //         </label>
-        //     </p>
-        //     <p>
-        //         <button type="submit">Send</button>
-        //     </p>
-        // </form>
+      
     );
 };
 
