@@ -59,15 +59,19 @@ export default function Home() {
           key="canonical"
         />
       </Head>
-      <section className="flex justify-between w-full min-h-screen h-screen bg-black px-4">
-        <div className="flex flex-col w-[50%] h-full items-center justify-center">
+      <section className="flex justify-between w-full min-h-screen h-screen bg-black ">
+        <div className="flex flex-col w-[50%] h-full items-center justify-center px-4">
           <h1 className="text-6xl max-w-2xl">
             A smarter approach to- category management
           </h1>
 
         </div>
         <div className="flex flex-col w-[50%] h-full items-center justify-center ">
-
+          <img
+            src={'/retail-hero-bluecompute.webp'}
+            alt="hero image"
+           className="w-[70%] object-cover"
+          />
 
         </div>
 
@@ -163,15 +167,27 @@ export default function Home() {
         </div>
       </section>
       <section className="flex justify-around items-center w-full px-4 pt-32 ">
-        <div className="flex flex-col justify-start">
+        <div className="flex flex-col justify-start w-[50%] px-4 space-y-4">
           <h3 className="text-4xl max-w-md font-semibold text-gray-800 ">
             Powerful Features for Modern Retail
           </h3>
+          <p className="text-gray-800 text-lg max-w-xl ">
+            We bring together advanced analytics, intuitive dashboards, and cloud-native architecture to empower modern retailers and category teams. From shelf data to strategy, our solutions simplify complexity and drive decisions that matter.
+          </p>
+          <ul className="text-gray-800 space-y-2 list-disc pl-6">
+            <li>Category Management Reinvented</li>
+            <li>Data Modeling & ETL Pipelines</li>
+            <li>Superset Dashboards</li>
+            <li>Category Performance Analytics</li>
+            <li>Azure-Based Data Architecture</li>
+
+          </ul>
         </div>
-        <div className="flex rounded-xl">
+        <div className="flex justify-center rounded-xl  w-[50%]">
           <img
             src="/category-management.webp"
-            className="w-96 rounded-xl"
+            className="w-[75%] rounded-xl"
+            alt="Category Management"
           />
         </div>
       </section>
