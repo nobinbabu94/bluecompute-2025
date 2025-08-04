@@ -39,7 +39,7 @@ const ContactFormNet = () => {
 
     return (
         <form onSubmit={handleSubmit} name="contact" data-netlify="true"
-        data-netlify-recaptcha="true" method="POST"
+            data-netlify-recaptcha="true" method="POST"
             className="w-[80%] px-6 py-8 md:py-16  flex flex-col items-center bg-gray-200 rounded-xl">
             <h3 className="text-2xl text-gray-800  font-bold">Fill The Contact Form</h3>
             <h4 className="text-base text-gray-500">Feel free to contact with us, we don't spam your email</h4>
@@ -72,8 +72,9 @@ const ContactFormNet = () => {
                 <textarea className="px-3 py-2 text-gray-500 border border-gray-200 focus:outline-1 outline-gray-500 rounded-md w-full h-32 resize-y"
                     type="message" name="message" value={message} onChange={handleChange}
                     placeholder="How can we help you?" />
+                <div data-netlify-recaptcha="true"></div>
             </div>
-            <div data-netlify-recaptcha="true" className="w-full grid grid-cols-1 sm:grid-cols-1 "></div>
+
             <div className="py-4">
                 <button type="submit"
                     // disabled={isLoading}
