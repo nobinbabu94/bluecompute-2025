@@ -75,7 +75,7 @@ const ContactFormNet = () => {
                     placeholder="How can we help you?" />
 
             </div>
-            <div data-netlify-recaptcha="true"></div>
+            <div data-netlify-recaptcha="true" className='w-full h-16'></div>
             <div className="py-4">
                 <button type="submit"
                     // disabled={isLoading}
