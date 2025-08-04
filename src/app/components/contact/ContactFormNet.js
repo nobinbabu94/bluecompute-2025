@@ -39,7 +39,6 @@ const ContactFormNet = () => {
 
     return (
         <form onSubmit={handleSubmit} name="contact" data-netlify="true"
-            method="POST"
             className="w-[80%] px-6 py-8 md:py-16  flex flex-col items-center bg-gray-200 rounded-xl">
             <h3 className="text-2xl text-gray-800  font-bold">Fill The Contact Form</h3>
             <h4 className="text-base text-gray-500">
