@@ -73,6 +73,7 @@ const ContactFormNet = () => {
                     type="message" name="message" value={message} onChange={handleChange}
                     placeholder="How can we help you?" />
             </div>
+            <div data-netlify-recaptcha="true" className="w-full grid grid-cols-1 sm:grid-cols-1 "></div>
             <div className="py-4">
                 <button type="submit"
                     // disabled={isLoading}
