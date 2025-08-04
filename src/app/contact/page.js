@@ -5,17 +5,17 @@ import ContactFormNet from "../components/contact/ContactFormNet";
 
 
 export const metadata = constructMetadata({
-  title: "Contact Us - Get in Touch for IT Solutions",
-  description: "Contact TechSolutions Pro for your IT needs. Reach out to our expert team for consultations, support, or to discuss your next technology project. Multiple ways to connect.",
-  keywords: [
-    "contact us",
-    "IT consultation",
-    "get quote",
-    "technical support",
-    "business inquiry",
-    "project discussion"
-  ],
-  canonicalUrl: "https://bluecompute.com/contact"
+    title: "Contact Us - Get in Touch for IT Solutions",
+    description: "Contact TechSolutions Pro for your IT needs. Reach out to our expert team for consultations, support, or to discuss your next technology project. Multiple ways to connect.",
+    keywords: [
+        "contact us",
+        "IT consultation",
+        "get quote",
+        "technical support",
+        "business inquiry",
+        "project discussion"
+    ],
+    canonicalUrl: "https://bluecompute.com/contact"
 })
 
 const page = () => {
@@ -63,7 +63,68 @@ const page = () => {
 
                 </div>
                 <div className="flex flex-col w-[50%] h-full items-center justify-start ">
-                    <ContactFormNet />
+                    <form
+                        name="contact"
+                        method="POST"
+                        data-netlify="true"
+                        data-netlify-recaptcha="true"
+                        className="w-[80%] px-6 py-8 md:py-16 flex flex-col items-center bg-gray-200 rounded-xl"
+                    >
+                        <input type="hidden" name="form-name" value="contact" />
+
+                        <h3 className="text-2xl text-gray-800 font-bold">Fill The Contact Form</h3>
+                        <h4 className="text-base text-gray-500">Feel free to contact with us, we don't spam your email</h4>
+
+                        <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-4 py-6">
+                            <input
+                                className="px-3 py-2 text-gray-500 border border-gray-200 focus:outline-1 outline-gray-500 rounded-md"
+                                placeholder="Name"
+                                type="text"
+                                name="name"
+                                required
+                            />
+
+                            <input
+                                className="px-3 py-2 text-gray-500 border border-gray-200 focus:outline-1 outline-gray-500 rounded-md"
+                                placeholder="Email"
+                                type="email"
+                                name="email"
+                                required
+                            />
+
+                            <input
+                                className="px-3 py-2 text-gray-500 border border-gray-200 focus:outline-1 outline-gray-500 rounded-md"
+                                placeholder="Phone Number"
+                                type="tel"
+                                name="phone"
+                            />
+
+                            <input
+                                className="px-3 py-2 text-gray-500 border border-gray-200 focus:outline-1 outline-gray-500 rounded-md"
+                                placeholder="Company Name"
+                                type="text"
+                                name="company"
+                            />
+                        </div>
+
+                        <div className="w-full">
+                            <textarea
+                                className="px-3 py-2 text-gray-500 border border-gray-200 focus:outline-1 outline-gray-500 rounded-md w-full h-32 resize-y mb-4"
+                                name="message"
+                                placeholder="How can we help you?"
+                                required
+                            />
+
+                            <div data-netlify-recaptcha="true" className="mb-4"></div>
+                        </div>
+
+                        <button
+                            type="submit"
+                            className="px-6 py-2 text-white bg-black/50 rounded-md hover:bg-black/70"
+                        >
+                            Submit
+                        </button>
+                    </form>
                 </div>
 
 
