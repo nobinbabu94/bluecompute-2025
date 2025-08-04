@@ -1,6 +1,7 @@
 import React from "react";
 import ContactFrom from "../components/contact/ContactForm";
 import { constructMetadata } from "../metadata";
+import ContactFormNet from "../components/contact/ContactFormNet";
 
 
 export const metadata = constructMetadata({
@@ -62,7 +63,7 @@ const page = () => {
 
                 </div>
                 <div className="flex flex-col w-[50%] h-full items-center justify-start ">
-                    <ContactFrom />
+                    <ContactFormNet />
                 </div>
 
 
