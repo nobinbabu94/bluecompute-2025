@@ -114,7 +114,7 @@ export default function Home() {
           whileInView="visible"
           viewport={{ once: true }}
         />
-        <div className="w-full flex justify-center md:gap-x-6 md:gap-y-16 gap-y-1 pt-24 flex-wrap">
+        <div className="w-full flex justify-center md:gap-x-6 md:gap-y-16 gap-y-4 gap-x-4 pt-24 flex-wrap">
           <Image
             src={'/Coca-Cola_logo.svg'}
             width={250}
@@ -172,7 +172,7 @@ export default function Home() {
 
       <section className="flex flex-col justify-center items-center w-full px-4 pt-32 rounded-xl">
         <h3 className="text-2xl md:text-4xl font-semibold text-gray-800 ">OUR EXPERTISE</h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 place-items-center pt-24">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 md:gap-x-6 md:gap-y-16 gap-y-4 gap-x-4  place-items-center pt-24">
 
           <Image
             src={'/four-azure.svg'}
