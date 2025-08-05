@@ -63,7 +63,7 @@ export default function Home() {
         />
       </Head> */}
       <section className="flex flex-col md:flex-row md:justify-between w-full h-[90vh] md:min-h-screen md:h-screen bg-black ">
-        <div className="flex flex-col lg:w-[50%] h-full items-center justify-center px-4">
+        <div className="flex flex-col lg:w-[50%] h-full md:justify-center md:items-center items-start justify-start px-4">
           {/* <h1 className="text-6xl max-w-2xl">
             A smarter approach to- category management
           </h1> */}
@@ -120,7 +120,7 @@ export default function Home() {
             width={250}
             height={250}
             alt='Filetext icon'
-            className='w-40 md:w-56 py-2 p-6 border border-gray-300 rounded-full'
+            className='w-64 md:w-56 py-2 p-6 border border-gray-300 rounded-full'
 
           />
           <Image
@@ -128,7 +128,7 @@ export default function Home() {
             width={250}
             height={250}
             alt='Filetext icon'
-                        className='w-40 md:w-56 py-2 p-6 border border-gray-300 rounded-full'
+                        className='w-64 md:w-56 py-2 p-6 border border-gray-300 rounded-full'
 
           />
           <Image
@@ -136,7 +136,7 @@ export default function Home() {
             width={250}
             height={250}
             alt='Filetext icon'
-                        className='w-40 md:w-56 py-2 p-6 border border-gray-300 rounded-full'
+                        className='w-64 md:w-56 py-2 p-6 border border-gray-300 rounded-full'
 
           />
           <Image
@@ -144,7 +144,7 @@ export default function Home() {
             width={250}
             height={400}
             alt='Filetext icon'
-                        className='w-40 md:w-56 py-2 p-6 border border-gray-300 rounded-full'
+                        className='w-64 md:w-56 py-2 p-6 border border-gray-300 rounded-full'
 
           />
 
@@ -172,14 +172,14 @@ export default function Home() {
 
       <section className="flex flex-col justify-center items-center w-full px-4 pt-32 rounded-xl">
         <h3 className="text-2xl md:text-4xl font-semibold text-gray-800 ">OUR EXPERTISE</h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 md:gap-x-6 md:gap-y-16 gap-y-4 gap-x-4  place-items-center pt-24">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 md:gap-x-6 md:gap-y-16 gap-y-4 gap-x-4  place-items-center pt-24">
 
           <Image
             src={'/four-azure.svg'}
             width={200}
             height={200}
             alt='Filetext icon'
-                                   className='w-36 md:w-52 py-2 p-6 rounded-full'
+                                   className='w-36 md:w-52 py-2 p-6 rounded-full shadow'
 
           />
           <Image
@@ -187,7 +187,7 @@ export default function Home() {
             width={200}
             height={200}
             alt='Filetext icon'
-                                   className='w-36 md:w-52 py-2 p-6 rounded-full'
+                                   className='w-36 md:w-52 py-2 p-6 rounded-full shadow'
 
           />
           <Image
@@ -195,7 +195,7 @@ export default function Home() {
             width={200}
             height={200}
             alt='Filetext icon'
-                                   className='w-36 md:w-52 py-2 p-6 rounded-full'
+                                   className='w-36 md:w-52 py-2 p-6 rounded-full shadow'
 
           />
           <Image
@@ -203,7 +203,7 @@ export default function Home() {
             width={200}
             height={200}
             alt='Filetext icon'
-                                   className='w-36 md:w-52 py-2 p-6 rounded-full'
+                                   className='w-36 md:w-52 py-2 p-6 rounded-full shadow'
 
           />
         </div>
