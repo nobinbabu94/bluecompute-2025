@@ -38,8 +38,8 @@ const page = () => {
                     </svg>
                 </div>
             </section>
-            <section className="flex justify-between items-start w-full px-4 pt-32">
-                <div className="flex flex-col w-[50%] gap-2 h-full items-center justify-center">
+            <section className="flex md:flex-row flex-col justify-between items-start w-full px-4 md:pt-32 pt-16">
+                <div className="flex flex-col md:w-[50%] w-full gap-2 h-full items-center justify-center">
                     <div className="w-full px-10 py-6 bg-gray-200 text-gray-800 rounded-xl">
                         <h3 className="text-2xl py-1 font-semibold">Contact</h3>
                         <h4 className="py-2">
@@ -62,7 +62,7 @@ const page = () => {
                     </div>
 
                 </div>
-                <div className="flex flex-col w-[50%] h-full items-center justify-start ">
+                <div className="flex flex-row md:flex-col md:w-[50%] md:py-0 py-4 w-full h-full items-center justify-start ">
                     <ContactFormNet />
                 </div>
 

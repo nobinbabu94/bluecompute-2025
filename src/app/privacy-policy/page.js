@@ -3,8 +3,8 @@ import React from "react";
 const page = () => {
     return (
         <div className=" text-white font-sans flex flex-col pb-32">
-            <section className="relative flex flex-col justify-center items-center w-full  h-[88vh] bg-black px-4">
-                <h1 className="text-6xl ">
+            <section className="relative flex flex-col justify-center items-center w-full h-[88vh]  bg-black px-4">
+                <h1 className="text-6xl text-center">
                     Privacy Policy
                 </h1>
                  <div className="absolute bottom-4 flex flex-col items-center justify-center mt-8 animate-bounce">
@@ -20,7 +20,7 @@ const page = () => {
                     </svg>
                 </div>
             </section>
-            <section className="text-gray-800 px-24 py-16 flex flex-col gap-4 space-y-6">
+            <section className="text-gray-800 md:px-24 px-4 py-16 flex flex-col gap-4 space-y-6">
                 <p className="text-xl font-semibold">Updated: January 1, 2025</p>
                 <h2 className="text-xl font-semibold">General</h2>
                 <p className="text-lg text-wrap text-ellipsis">
