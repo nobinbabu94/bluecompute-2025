@@ -2,7 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/navbar/Footer";
-import { constructMetadata } from "./metadata";
+import { constructMetadata, generateViewport } from "./metadata";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,6 +13,8 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+export const viewport = generateViewport();
 
 export const metadata = constructMetadata()
 
