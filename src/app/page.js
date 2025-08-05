@@ -1,6 +1,8 @@
-import Head from "next/head";
+// import Head from "next/head";
 import Image from "next/image";
 import { constructMetadata } from "./metadata";
+import Headers from "./components/reusetext/Headers";
+
 
 export const metadata = constructMetadata({
   title: "BlueCompute | Cloud Solutions to Drive Digital Transformation.",
@@ -51,36 +53,68 @@ export default function Home() {
   ]
   return (
     <div className=" text-white font-sans flex flex-col pb-32">
-      <Head>
+
+      {/* <Head>
         <title>Bluecompute</title>
         <link
           rel="canonical"
           href="https://bluecompute.com/"
           key="canonical"
         />
-      </Head>
-      <section className="flex justify-between w-full min-h-screen h-screen bg-black ">
-        <div className="flex flex-col w-[50%] h-full items-center justify-center px-4">
-          <h1 className="text-6xl max-w-2xl">
+      </Head> */}
+      <section className="flex flex-col md:flex-row md:justify-between w-full h-[90vh] md:min-h-screen md:h-screen bg-black ">
+        <div className="flex flex-col lg:w-[50%] h-full items-center justify-center px-4">
+          {/* <h1 className="text-6xl max-w-2xl">
             A smarter approach to- category management
-          </h1>
+          </h1> */}
 
+          <Headers
+            text="A smarter approach to- category management"
+            color="text-white"
+            size="text-4xl md:text-6xl"
+            element="h1"
+            width="max-w-2xl"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
+          />
         </div>
-        <div className="flex flex-col w-[50%] h-full items-center justify-center ">
+        <div className="md:order-none order-first flex w-full md:w-[50%] h-full items-center justify-center ">
           <img
             src={'/retail-hero-bluecompute.webp'}
             alt="hero image"
-           className="w-[70%] object-cover"
+            className="md:w-[70%] w-[60%] object-cover"
           />
-
         </div>
-
       </section>
       <section className="flex flex-col  items-center w-full px-4 pt-32">
-        <h3 className="text-4xl font-semibold text-gray-800 ">
+        {/* <h3 className="text-4xl font-semibold text-gray-800 ">
           Proudly Trusted by Top Retail Stores Around You
-        </h3>
-        <div className="w-full flex justify-center gap-x-6 gap-y-16 pt-24 flex-wrap">
+        </h3> */}
+
+        <Headers
+          text="Proudly Trusted by Top Retail Stores Around You"
+          color="text-gray-800"
+          size="text-2xl md:text-4xl"
+          font='font-semibold'
+          element="h3"
+          width="max-w-full"
+          initial={"hidden"}
+          variants={{
+            hidden: { opacity: 0, translateX: 90 },
+            visible: { opacity: 1, translateX: 0 },
+          }}
+          transition={{
+            type: "spring",
+            duration: 0.2,
+            damping: 8,
+            delay: 0.1,
+            stiffness: 100,
+          }}
+          animate="visible"
+          whileInView="visible"
+          viewport={{ once: true }}
+        />
+        <div className="w-full flex justify-center md:gap-x-6 md:gap-y-16 gap-y-1 pt-24 flex-wrap">
           <Image
             src={'/Coca-Cola_logo.svg'}
             width={200}
@@ -114,7 +148,7 @@ export default function Home() {
       </section>
 
       <section className="flex flex-col justify-center items-center w-full px-4 pt-32 rounded-xl">
-        <h3 className="text-4xl font-semibold text-gray-800 ">
+        <h3 className="text-2xl md:text-4xl font-semibold text-gray-800 ">
           Why Choose us ?
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 place-items-center pt-24">
@@ -133,7 +167,7 @@ export default function Home() {
       </section>
 
       <section className="flex flex-col justify-center items-center w-full px-4 pt-32 rounded-xl">
-        <h3 className="text-4xl font-semibold text-gray-800 ">OUR EXPERTISE</h3>
+        <h3 className="text-2xl md:text-4xl font-semibold text-gray-800 ">OUR EXPERTISE</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 place-items-center pt-24">
 
           <Image
@@ -166,9 +200,9 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className="flex justify-around items-center w-full px-4 pt-32 ">
-        <div className="flex flex-col justify-start w-[50%] px-4 space-y-4">
-          <h3 className="text-4xl max-w-md font-semibold text-gray-800 ">
+      <section className="flex md:flex-row flex-col justify-around items-center w-full md:gap-0 gap-8 px-4 pt-32 ">
+        <div className="flex flex-col justify-start w-full md:w-[50%] px-4 space-y-4">
+          <h3 className="text-2xl md:text-4xl md:max-w-md  font-semibold text-gray-800 ">
             Powerful Features for Modern Retail
           </h3>
           <p className="text-gray-800 text-lg max-w-xl ">
@@ -183,7 +217,7 @@ export default function Home() {
 
           </ul>
         </div>
-        <div className="flex justify-center rounded-xl  w-[50%]">
+        <div className="flex justify-center rounded-xl  w-full md:w-[50%]">
           <img
             src="/category-management.webp"
             className="w-[75%] rounded-xl"
@@ -192,15 +226,15 @@ export default function Home() {
         </div>
       </section>
       <section className="flex flex-col bg-black justify-center items-center w-full px-4 mt-32 py-32 rounded-4xl ">
-        <h3 className="text-4xl  font-semibold ">
+        <h3 className="text-2xl md:text-4xl  font-semibold ">
           Get early access
         </h3>
         <p className="text-lg ">Sign up your team today to be the first to try out our new product to increase your team’s productivity
         </p>
-        <form className="flex gap-4 py-6">
+        <form className="flex md:flex-row flex-col gap-4 py-6 md:px-0 px-4">
           <input
             placeholder="Your Email"
-            className="h-10 w-96 border-white border p-4"
+            className="h-10 md:w-96 border-white border p-4"
           />
           <button className="border px-4">
             Signup

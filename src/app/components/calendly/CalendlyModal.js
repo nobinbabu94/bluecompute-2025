@@ -35,7 +35,7 @@ const CalendlyModal = () => {
     <>
       <button
         onClick={openModal}
-        className="border border-blue-300 py-2 px-4 text-white cursor-pointer bg-gray-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 rounded-full "
+        className="border border-blue-300 md:py-2 md:px-4 py-1 px-2 text-white cursor-pointer bg-gray-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 rounded-full "
       >
         Get a demo
       </button>

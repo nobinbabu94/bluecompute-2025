@@ -85,7 +85,7 @@ const Navbar = () => {
                             <img
                                 src="/BlueCompute_large-logo.png"
                                 alt="Bluecompute Logo"
-                                className={`transition-all duration-500 w-36 md:w-40 lg:w-52 ${isScrolled ?
+                                className={`transition-all duration-500 w-40 md:w-40 lg:w-52 ${isScrolled ?
                                     '' :
                                     ''
                                     }`}
