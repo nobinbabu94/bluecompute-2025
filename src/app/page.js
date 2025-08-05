@@ -160,6 +160,7 @@ export default function Home() {
       </section>
 
       <section className="flex flex-col justify-center items-center w-full px-4 pt-32 rounded-xl">
+
         <h3 className="text-3xl md:text-4xl font-semibold uppercase text-gray-800 ">
           Why Choose us ?
         </h3>
@@ -247,12 +248,12 @@ export default function Home() {
         </h3>
         <p className="text-lg ">Sign up your team today to be the first to try out our new product to increase your team’s productivity
         </p>
-        <form className="flex md:flex-row flex-col gap-4 py-6 md:px-0 px-4">
+        <form className="flex md:flex-row flex-col items-center justify-center gap-4 py-6 md:px-0 w-full px-4">
           <input
             placeholder="Your Email"
-            className="h-10 md:w-96 border-white border p-4"
+            className="h-10 md:w-96 w-full  border-white border md:px-4 md:py-2"
           />
-          <button className="border px-4">
+          <button className="border py-1 px-4 md:px-4 md:py-2 w-32 md:w-auto">
             Signup
           </button>
         </form>
