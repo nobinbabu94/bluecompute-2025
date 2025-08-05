@@ -82,7 +82,7 @@ export default function Home() {
           <img
             src={'/retail-hero-bluecompute.webp'}
             alt="hero image"
-            className="md:w-[70%] w-[60%] object-cover"
+            className="md:w-[70%] w-[70%] object-cover"
           />
         </div>
       </section>
@@ -117,31 +117,35 @@ export default function Home() {
         <div className="w-full flex justify-center md:gap-x-6 md:gap-y-16 gap-y-1 pt-24 flex-wrap">
           <Image
             src={'/Coca-Cola_logo.svg'}
-            width={200}
-            height={200}
+            width={250}
+            height={250}
             alt='Filetext icon'
-            className='py-2 border border-gray-300 rounded-full'
+            className='w-40 md:w-56 py-2 p-6 border border-gray-300 rounded-full'
+
           />
           <Image
             src={'/The_Boston_Beer_Company_Inc.svg'}
             width={250}
             height={250}
             alt='Filetext icon'
-            className='py-2 p-6 border border-gray-300 rounded-full'
+                        className='w-40 md:w-56 py-2 p-6 border border-gray-300 rounded-full'
+
           />
           <Image
             src={'/ocrolus.svg'}
             width={250}
             height={250}
             alt='Filetext icon'
-            className='py-2 p-6 border border-gray-300 rounded-full'
+                        className='w-40 md:w-56 py-2 p-6 border border-gray-300 rounded-full'
+
           />
           <Image
             src={'/vitaclay.svg'}
             width={250}
             height={400}
             alt='Filetext icon'
-            className='py-2 p-6 border border-gray-300 rounded-full'
+                        className='w-40 md:w-56 py-2 p-6 border border-gray-300 rounded-full'
+
           />
 
         </div>
@@ -175,28 +179,32 @@ export default function Home() {
             width={200}
             height={200}
             alt='Filetext icon'
-            className='py-2 p-6 rounded-full'
+                                   className='w-36 md:w-52 py-2 p-6 rounded-full'
+
           />
           <Image
             src={'/four-docker.svg'}
-            width={250}
-            height={250}
+            width={200}
+            height={200}
             alt='Filetext icon'
-            className='py-2 p-6 rounded-full'
+                                   className='w-36 md:w-52 py-2 p-6 rounded-full'
+
           />
           <Image
             src={'/four-gcp.svg'}
             width={200}
             height={200}
             alt='Filetext icon'
-            className='py-2 p-6 rounded-full'
+                                   className='w-36 md:w-52 py-2 p-6 rounded-full'
+
           />
           <Image
             src={'/four-kubernetes.svg'}
             width={200}
             height={200}
             alt='Filetext icon'
-            className='py-2 p-6 rounded-full'
+                                   className='w-36 md:w-52 py-2 p-6 rounded-full'
+
           />
         </div>
       </section>
