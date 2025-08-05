@@ -62,7 +62,7 @@ export default function Home() {
           key="canonical"
         />
       </Head> */}
-      <section className="flex flex-col md:flex-row md:justify-between w-full h-[90vh] md:min-h-screen md:h-screen bg-black ">
+      <section className=" flex flex-col md:flex-row md:justify-between w-full h-[90vh] md:min-h-screen md:h-screen bg-black ">
         <div className="flex flex-col lg:w-[50%] h-full justify-center items-center md:items-start  px-4">
           {/* <h1 className="text-6xl max-w-2xl">
             A smarter approach to- category management
@@ -79,15 +79,19 @@ export default function Home() {
           />
           <h2 className="text-lg max-w-xl pt-4 bg-gradient-to-r from-blue-300 via-white to-pink-300 bg-clip-text text-transparent">
             Align strategy with shopper behavior using AI-powered tools.
-            </h2>
+          </h2>
         </div>
-        <div className="md:order-none order-first flex w-full md:w-[50%] h-full items-center justify-center ">
+        <div className="relative md:order-none order-first flex w-full md:w-[50%] h-full items-center justify-center">
+          {/* Decorative Blob */}
+          <div className="absolute w-72 h-72 bg-purple-500/20 rounded-full blur-3xl md:top-28 md:left-24 z-0 animate-pulse" />
+
           <img
-            src={'/retail-hero-bluecompute.webp'}
+            src="/retail-hero-bluecompute.webp"
             alt="hero image"
-            className="md:w-[70%] w-[70%] object-cover"
+            className="md:w-[70%] w-[70%] object-cover z-10 relative pt-4 md:pt-0"
           />
         </div>
+
       </section>
       <section className="flex flex-col  items-center w-full px-4 pt-32">
         {/* <h3 className="text-4xl font-semibold text-gray-800 ">
@@ -117,7 +121,7 @@ export default function Home() {
           whileInView="visible"
           viewport={{ once: true }}
         />
-        
+
         <div className="w-full flex justify-center md:gap-x-6 md:gap-y-16 gap-y-4 gap-x-4 pt-24 flex-wrap">
           <Image
             src={'/Coca-Cola_logo.svg'}
@@ -132,7 +136,7 @@ export default function Home() {
             width={250}
             height={250}
             alt='Filetext icon'
-                        className='w-64 md:w-56 py-2 p-6 border border-gray-300 rounded-full'
+            className='w-64 md:w-56 py-2 p-6 border border-gray-300 rounded-full'
 
           />
           <Image
@@ -140,7 +144,7 @@ export default function Home() {
             width={250}
             height={250}
             alt='Filetext icon'
-                        className='w-64 md:w-56 py-2 p-6 border border-gray-300 rounded-full'
+            className='w-64 md:w-56 py-2 p-6 border border-gray-300 rounded-full'
 
           />
           <Image
@@ -148,7 +152,7 @@ export default function Home() {
             width={250}
             height={400}
             alt='Filetext icon'
-                        className='w-64 md:w-56 py-2 p-6 border border-gray-300 rounded-full'
+            className='w-64 md:w-56 py-2 p-6 border border-gray-300 rounded-full'
 
           />
 
@@ -183,7 +187,7 @@ export default function Home() {
             width={200}
             height={200}
             alt='Filetext icon'
-                                   className='w-36 md:w-52 py-2 p-6 rounded-full shadow'
+            className='w-36 md:w-52 py-2 p-6 rounded-full shadow'
 
           />
           <Image
@@ -191,7 +195,7 @@ export default function Home() {
             width={200}
             height={200}
             alt='Filetext icon'
-                                   className='w-36 md:w-52 py-2 p-6 rounded-full shadow'
+            className='w-36 md:w-52 py-2 p-6 rounded-full shadow'
 
           />
           <Image
@@ -199,7 +203,7 @@ export default function Home() {
             width={200}
             height={200}
             alt='Filetext icon'
-                                   className='w-36 md:w-52 py-2 p-6 rounded-full shadow'
+            className='w-36 md:w-52 py-2 p-6 rounded-full shadow'
 
           />
           <Image
@@ -207,7 +211,7 @@ export default function Home() {
             width={200}
             height={200}
             alt='Filetext icon'
-                                   className='w-36 md:w-52 py-2 p-6 rounded-full shadow'
+            className='w-36 md:w-52 py-2 p-6 rounded-full shadow'
 
           />
         </div>
