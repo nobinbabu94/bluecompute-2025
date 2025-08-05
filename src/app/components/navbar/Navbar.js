@@ -143,18 +143,18 @@ const Navbar = () => {
                     : 'max-h-0 opacity-0 invisible'
                     } overflow-hidden`}>
 
-                    <div className="absolute inset-0 bg-gradient-to-br from-white via-violet-50/30 to-indigo-50/50 backdrop-blur-xl"></div>
+                    <div className="absolute inset-0 bg-gradient-to-br from-black/90 via-black/50 to-black/90 backdrop-blur-xl"></div>
 
                     <div className="relative border-t border-gray-200/50 pt-6 pb-8 px-4 space-y-3">
 
                         <div className="space-y-2">
                             <Link href='/' title='Home Bluecomputee' onClick={closeMobileMenu}>
                                 <div className={`group px-6 py-4 rounded-2xl transition-all duration-300 
-                                flex items-center hover:bg-white/80 hover:shadow-lg hover:scale-[1.02] 
+                                flex items-center  hover:shadow-lg hover:scale-[1.02] 
                                 ${pathname === '/' ? 'bg-violet-100/70 text-blue-700 shadow-md' : 'text-gray-700'
                                     }`}>
                                     <div className="flex items-center justify-center w-10 h-10 rounded-xl 
-                                    bg-gradient-to-tr from-[#1a1a2e] to-[#0f0f23] text-white mr-4 
+                                    bg-gradient-to-tr from-[#10101d] to-[#0f0f23] text-white mr-4 
                                     group-hover:scale-110 transition-transform duration-300">
                                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round"
@@ -191,9 +191,9 @@ const Navbar = () => {
                                     )}
                                 </div>
                             </Link> */}
-                            <Link href={'/contac/'} title="Contact Bluecompute" onClick={closeMobileMenu}>
+                            <Link href={'/contact/'} title="Contact Bluecompute" onClick={closeMobileMenu}>
                                 <div className={`group px-6 py-4 rounded-2xl transition-all duration-300 
-                                flex items-center hover:bg-white/80 hover:shadow-lg hover:scale-[1.02] 
+                                flex items-center hover:shadow-lg hover:scale-[1.02] 
                                 ${pathname === '/contact/' ? 'bg-violet-100/70 text-blue-700 shadow-md' : 'text-gray-700'
                                     }`}>
                                     <div className="flex items-center justify-center w-10 h-10 rounded-xl 

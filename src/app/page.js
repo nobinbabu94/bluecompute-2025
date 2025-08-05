@@ -63,7 +63,7 @@ export default function Home() {
         />
       </Head> */}
       <section className="flex flex-col md:flex-row md:justify-between w-full h-[90vh] md:min-h-screen md:h-screen bg-black ">
-        <div className="flex flex-col lg:w-[50%] h-full md:justify-center md:items-center items-start justify-start px-4">
+        <div className="flex flex-col lg:w-[50%] h-full justify-center items-center md:items-start  px-4">
           {/* <h1 className="text-6xl max-w-2xl">
             A smarter approach to- category management
           </h1> */}
@@ -77,6 +77,9 @@ export default function Home() {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
           />
+          <h2 className="text-white/80 text-lg max-w-xl pt-4 ">
+            Align strategy with shopper behavior using AI-powered tools.
+            </h2>
         </div>
         <div className="md:order-none order-first flex w-full md:w-[50%] h-full items-center justify-center ">
           <img
@@ -114,6 +117,7 @@ export default function Home() {
           whileInView="visible"
           viewport={{ once: true }}
         />
+        
         <div className="w-full flex justify-center md:gap-x-6 md:gap-y-16 gap-y-4 gap-x-4 pt-24 flex-wrap">
           <Image
             src={'/Coca-Cola_logo.svg'}
@@ -152,7 +156,7 @@ export default function Home() {
       </section>
 
       <section className="flex flex-col justify-center items-center w-full px-4 pt-32 rounded-xl">
-        <h3 className="text-2xl md:text-4xl font-semibold text-gray-800 ">
+        <h3 className="text-3xl md:text-4xl font-semibold uppercase text-gray-800 ">
           Why Choose us ?
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 place-items-center pt-24">
@@ -171,7 +175,7 @@ export default function Home() {
       </section>
 
       <section className="flex flex-col justify-center items-center w-full px-4 pt-32 rounded-xl">
-        <h3 className="text-2xl md:text-4xl font-semibold text-gray-800 ">OUR EXPERTISE</h3>
+        <h3 className="text-3xl md:text-4xl font-semibold text-gray-800 ">OUR EXPERTISE</h3>
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 md:gap-x-6 md:gap-y-16 gap-y-4 gap-x-4  place-items-center pt-24">
 
           <Image
@@ -210,7 +214,7 @@ export default function Home() {
       </section>
       <section className="flex md:flex-row flex-col justify-around items-center w-full md:gap-0 gap-8 px-4 pt-32 ">
         <div className="flex flex-col justify-start w-full md:w-[50%] px-4 space-y-4">
-          <h3 className="text-2xl md:text-4xl md:max-w-md  font-semibold text-gray-800 ">
+          <h3 className="text-3xl md:text-4xl md:max-w-md md:text-start text-center font-semibold text-gray-800 ">
             Powerful Features for Modern Retail
           </h3>
           <p className="text-gray-800 text-lg max-w-xl ">
