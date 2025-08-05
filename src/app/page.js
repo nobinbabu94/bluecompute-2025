@@ -251,7 +251,7 @@ export default function Home() {
         <form className="flex md:flex-row flex-col items-center justify-center gap-4 py-6 md:px-0 w-full px-4">
           <input
             placeholder="Your Email"
-            className="h-10 md:w-96 w-full  border-white border md:px-4 md:py-2"
+            className="h-10 md:w-96 w-full  border-white border pl-4 md:px-4 md:py-2"
           />
           <button className="border py-1 px-4 md:px-4 md:py-2 w-32 md:w-auto">
             Signup
