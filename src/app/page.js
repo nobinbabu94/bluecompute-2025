@@ -77,7 +77,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
           />
-          <h2 className="text-white/80 text-lg max-w-xl pt-4 ">
+          <h2 className="text-lg max-w-xl pt-4 bg-gradient-to-r from-blue-300 via-white to-pink-300 bg-clip-text text-transparent">
             Align strategy with shopper behavior using AI-powered tools.
             </h2>
         </div>
