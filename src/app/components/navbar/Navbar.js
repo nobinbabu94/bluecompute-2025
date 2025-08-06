@@ -108,11 +108,18 @@ const Navbar = () => {
                                     }`}></span>
                             </div>
                         </Link> */}
-                      <Link href='/contact/' title='Home Bluecompute'
+                      <Link href='/contact/' title='Contact Bluecompute'
                             className={`cursor-pointer relative   group py-2 px-3 transition-all duration-200 ${pathname === '/contact/' ? 'text-blue-500 font-semibold ' : 'text-white'
                                 }`}
                         >
                                 Contact
+                     
+                        </Link> 
+                        <Link href='/about-us/' title='About Bluecompute'
+                            className={`cursor-pointer relative   group py-2 px-3 transition-all duration-200 ${pathname === '/about-us/' ? 'text-blue-500 font-semibold ' : 'text-white'
+                                }`}
+                        >
+                                About us
                      
                         </Link> 
                     </div>
@@ -121,8 +128,8 @@ const Navbar = () => {
                         <button
                             onClick={toggleMobileMenu}
                             className={`flex items-center justify-center p-3 cursor-pointer
-                                 text-gray-700 focus:outline-none rounded-xl transition-all duration-300
-                                  ${showMenu ? 'text-violet-600 ' : ''
+                                 text-gray-400 focus:outline-none rounded-xl transition-all duration-300
+                                  ${showMenu ? 'text-white ' : ''
                                 }`}
                             aria-label="Toggle menu"
                             aria-expanded={showMenu}
@@ -138,7 +145,7 @@ const Navbar = () => {
                         </button>
                     </div>
                 </div>
-                <div className={`lg:hidden mobile-menu-container transition-all duration-500 ease-out ${showMenu
+                <div className={`lg:hidden bg-gray-600 mobile-menu-container rounded-b-xl transition-all duration-500 ease-out ${showMenu
                     ? 'max-h-screen opacity-100 visible'
                     : 'max-h-0 opacity-0 invisible'
                     } overflow-hidden`}>
@@ -163,17 +170,17 @@ const Navbar = () => {
                                     </div>
                                     <div>
                                         <div className="font-semibold text-md">Home</div>
-                                        <div className="text-sm text-gray-500">Main dashboard</div>
+                                        <div className="text-sm text-gray-600">Main dashboard</div>
                                     </div>
                                     {pathname === '/' && (
                                         <div className="ml-auto w-2 h-2 bg-[#1a1a2e] rounded-full animate-pulse"></div>
                                     )}
                                 </div>
                             </Link>
-                            {/* <Link href={'/about'} title="About us Bluecompute" onClick={closeMobileMenu}>
+                            <Link href={'/about-us'} title="About us Bluecompute" onClick={closeMobileMenu}>
                                 <div className={`group px-6 py-4 rounded-2xl transition-all duration-300 
                                 flex items-center hover:bg-white/80 hover:shadow-lg hover:scale-[1.02] 
-                                ${pathname === '/about' ? 'bg-violet-100/70 text-blue-700 shadow-md' : 'text-gray-700'
+                                ${pathname === '/about-us' ? 'bg-violet-100/70 text-blue-700 shadow-md' : 'text-gray-700'
                                     }`}>
                                     <div className="flex items-center justify-center w-10 h-10 rounded-xl 
                                     bg-gradient-to-br from-[#1a1a2e] to-[#0f0f23] text-white mr-4 
@@ -186,15 +193,15 @@ const Navbar = () => {
                                         <div className="font-semibold text-lg">About Us</div>
                                         <div className="text-sm text-gray-500">Learn our story</div>
                                     </div>
-                                    {pathname === '/about' && (
+                                    {pathname === '/about-us' && (
                                         <div className="ml-auto w-2 h-2 bg-[#1a1a2e] rounded-full animate-pulse"></div>
                                     )}
                                 </div>
-                            </Link> */}
+                            </Link>
                             <Link href={'/contact/'} title="Contact Bluecompute" onClick={closeMobileMenu}>
                                 <div className={`group px-6 py-4 rounded-2xl transition-all duration-300 
                                 flex items-center hover:shadow-lg hover:scale-[1.02] 
-                                ${pathname === '/contact/' ? 'bg-violet-100/70 text-blue-700 shadow-md' : 'text-gray-700'
+                                ${pathname === '/contact/' ? 'bg-violet-100/70 text-blue-700 shadow-md' : 'text-gray-100'
                                     }`}>
                                     <div className="flex items-center justify-center w-10 h-10 rounded-xl 
                                     bg-gradient-to-br from-[#1a1a2e] to-[#0f0f23] text-white mr-4 
@@ -205,7 +212,7 @@ const Navbar = () => {
                                     </div>
                                     <div>
                                         <div className="font-semibold text-md">Contact</div>
-                                        <div className="text-sm text-gray-500">Get in touch</div>
+                                        <div className={`text-sm text-gray-300`}>Get in touch</div>
                                     </div>
                                     {pathname === '/contact/' && (
                                         <div className="ml-auto w-2 h-2 bg-[#1a1a2e] rounded-full animate-pulse"></div>

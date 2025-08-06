@@ -1,6 +1,6 @@
 
 export const siteConfig = {
-    name: "Bluecompute pvt ltd",
+    name: "Bluecompute",
     description: "Leading IT solutions provider offering innovative technology services, products, and digital transformation solutions for businesses worldwide.",
     url: "https://bluecompute.com",
     ogImage: "https://bluecompute.com/og-image.png",

@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { constructMetadata } from "./metadata";
 import Headers from "./components/reusetext/Headers";
+import ScrollReveal from "./components/testcases/ScrollReveal";
 
 
 export const metadata = constructMetadata({
@@ -49,7 +50,6 @@ export default function Home() {
       title: 'Competitive Benchmarking',
       description: 'Understand and outperform competition with real-time market data',
     }
-
   ]
   return (
     <div className=" text-white font-sans flex flex-col pb-32">
@@ -67,18 +67,22 @@ export default function Home() {
           {/* <h1 className="text-6xl max-w-2xl">
             A smarter approach to- category management
           </h1> */}
-
           <Headers
             text="A smarter approach to- category management"
-            color="text-white"
-            size="text-4xl md:text-6xl"
             element="h1"
-            width="max-w-2xl"
+            classname={'max-w-2xl text-4xl md:text-6xl text-white'}
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
           />
-          <h2 className="text-lg max-w-xl pt-4 bg-gradient-to-r from-blue-300 via-white to-pink-300 bg-clip-text text-transparent">
-            Align strategy with shopper behavior using AI-powered tools.
+             <Headers
+            text="Align strategy with shopper behavior using AI-powered tools."
+            element="h1"
+            classname={'bg-gradient-to-r from-blue-300 via-white to-pink-300 bg-clip-text text-transparent  max-w-xl pt-4 text-lg'}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
+          />
+          <h2 className="">
+            
           </h2>
         </div>
         <div className="relative md:order-none order-first flex w-full md:w-[50%] h-full items-center justify-center">
@@ -91,37 +95,18 @@ export default function Home() {
             className="md:w-[70%] w-[70%] object-cover z-10 relative pt-4 md:pt-0"
           />
         </div>
-
       </section>
       <section className="flex flex-col  items-center w-full px-4 pt-32">
         {/* <h3 className="text-4xl font-semibold text-gray-800 ">
           Proudly Trusted by Top Retail Stores Around You
         </h3> */}
-
         <Headers
           text="Proudly Trusted by Top Retail Stores Around You"
-          color="text-gray-800"
-          size="text-2xl md:text-4xl"
-          font='font-semibold'
+          classname={"text-gray-800 text-2xl md:text-4xl max-w-full font-semibold"}
           element="h3"
-          width="max-w-full"
-          initial={"hidden"}
-          variants={{
-            hidden: { opacity: 0, translateX: 90 },
-            visible: { opacity: 1, translateX: 0 },
-          }}
-          transition={{
-            type: "spring",
-            duration: 0.2,
-            damping: 8,
-            delay: 0.1,
-            stiffness: 100,
-          }}
-          animate="visible"
-          whileInView="visible"
-          viewport={{ once: true }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
         />
-
         <div className="w-full flex justify-center md:gap-x-6 md:gap-y-16 gap-y-4 gap-x-4 pt-24 flex-wrap">
           <Image
             src={'/Coca-Cola_logo.svg'}
@@ -129,7 +114,6 @@ export default function Home() {
             height={250}
             alt='Filetext icon'
             className='w-64 md:w-56 py-2 p-6 border border-gray-300 rounded-full'
-
           />
           <Image
             src={'/The_Boston_Beer_Company_Inc.svg'}
@@ -137,7 +121,6 @@ export default function Home() {
             height={250}
             alt='Filetext icon'
             className='w-64 md:w-56 py-2 p-6 border border-gray-300 rounded-full'
-
           />
           <Image
             src={'/ocrolus.svg'}
@@ -145,7 +128,6 @@ export default function Home() {
             height={250}
             alt='Filetext icon'
             className='w-64 md:w-56 py-2 p-6 border border-gray-300 rounded-full'
-
           />
           <Image
             src={'/vitaclay.svg'}
@@ -153,19 +135,18 @@ export default function Home() {
             height={400}
             alt='Filetext icon'
             className='w-64 md:w-56 py-2 p-6 border border-gray-300 rounded-full'
-
           />
-
         </div>
       </section>
-
       <section className="flex flex-col justify-center items-center w-full px-4 pt-32 rounded-xl">
-
-        <h3 className="text-3xl md:text-4xl font-semibold uppercase text-gray-800 ">
-          Why Choose us ?
-        </h3>
+        <Headers
+          text="Why Choose us ?"
+          classname={"text-gray-800 text-3xl md:text-4xl font-semibold max-w-full"}
+          element="h3"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
+        />
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 place-items-center pt-24">
-
           {services.map((service, index) => (
             <div
               key={index}
@@ -178,11 +159,15 @@ export default function Home() {
           ))}
         </div>
       </section>
-
       <section className="flex flex-col justify-center items-center w-full px-4 pt-32 rounded-xl">
-        <h3 className="text-3xl md:text-4xl font-semibold text-gray-800 ">OUR EXPERTISE</h3>
+        <Headers
+          text="Our Expertise"
+          classname={"text-gray-800 text-3xl md:text-4xl font-semibold max-w-full"}
+          element="h3"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
+        />
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 md:gap-x-6 md:gap-y-16 gap-y-4 gap-x-4  place-items-center pt-24">
-
           <Image
             src={'/four-azure.svg'}
             width={200}
@@ -231,7 +216,6 @@ export default function Home() {
             <li>Superset Dashboards</li>
             <li>Category Performance Analytics</li>
             <li>Azure-Based Data Architecture</li>
-
           </ul>
         </div>
         <div className="flex justify-center rounded-xl  w-full md:w-[50%]">

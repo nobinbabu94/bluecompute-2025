@@ -1,22 +1,31 @@
 'use client'
-import { useEffect, useState, useRef } from 'react'
-import { motion } from 'framer-motion'
+import * as motion from "motion/react-client"
+import { useRef } from "react"
 
 // Custom useInView hook
-  
+
 
 // Usage
 export default function ScrollReveal() {
 
+  const scrollRef = useRef(null)
+
+
   return (
-     <motion.div
-      // Content is visible by default, then animates
-      initial={{ opacity: 1, y: 0 }} // Start visible for SSR
-      animate={{ opacity: 1, y: 0 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-    >
-      <h2 className='text-gray-500'>This animates when scrolled into view</h2>
-    </motion.div>
+    <div ref={scrollRef} style={{ overflow: "scroll" }}>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        
+        style={{
+          width: 100,
+          height: 100,
+          backgroundColor: "#9911ff",
+          borderRadius: 5,
+        }}
+      >
+
+      </motion.div>
+    </div>
   )
 }

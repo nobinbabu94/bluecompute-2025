@@ -39,7 +39,7 @@ const ContactFormNet = () => {
 
     return (
         <form onSubmit={handleSubmit} name="contact" data-netlify="true"
-            className="md:w-[80%] w-full px-6 py-8 md:py-16  flex flex-col items-center bg-gray-200 rounded-xl">
+            className="md:w-[80%] w-full px-6 py-8 md:py-16  flex flex-col items-center  rounded-xl">
             <h3 className="text-2xl text-gray-800  font-bold">Fill The Contact Form</h3>
             <h4 className="text-base text-gray-500 md:text-start text-center">
                 Feel free to contact with us, we don't spam your email</h4>
@@ -78,7 +78,7 @@ const ContactFormNet = () => {
             <div className="py-4">
                 <button type="submit"
                     // disabled={isLoading}
-                    className="px-6 py-2 text-white bg-black/50 rounded-md ">
+                    className="px-6 py-2 text-white bg-black/50 border rounded-md ">
                     {/* {isLoading ? 'Loading...' : 'Submit'} */}Submit
                 </button>
             </div>

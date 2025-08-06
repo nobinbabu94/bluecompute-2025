@@ -5,7 +5,7 @@ import ContactFormNet from "../components/contact/ContactFormNet";
 
 
 export const metadata = constructMetadata({
-  title: "Contact Us - Get in Touch for IT Solutions",
+  title: "Contact Us | Get in Touch for IT Solutions",
   description: "Contact TechSolutions Pro for your IT needs. Reach out to our expert team for consultations, support, or to discuss your next technology project. Multiple ways to connect.",
   keywords: [
     "contact us",
@@ -20,7 +20,7 @@ export const metadata = constructMetadata({
 
 const page = () => {
     return (
-        <div className=" text-white font-sans flex flex-col pb-32 ">
+        <div className=" text-white font-sans flex flex-col pb-32 gap-4">
             <section className="relative flex flex-col justify-center items-center w-full h-[88vh]  bg-black px-4">
                 <h1 className="text-6xl ">
                     Contact us
@@ -38,9 +38,9 @@ const page = () => {
                     </svg>
                 </div>
             </section>
-            <section className="flex md:flex-row flex-col justify-between items-start w-full px-4 md:pt-32 pt-16">
-                <div className="flex flex-col md:w-[50%] w-full gap-2 h-full items-center justify-center">
-                    <div className="w-full px-10 py-6 bg-gray-200 text-gray-800 rounded-xl">
+            <section className="flex md:flex-row flex-col justify-between items-start bg-gray-200  w-full px-4 md:pt-32 pt-16">
+                <div className="flex flex-col md:w-[50%] w-full gap-2 h-full items-center justify-center ">
+                    <div className="w-full px-10 py-6 bg-gray-200 text-gray-800 rounded-xl shadow border border-gray-300">
                         <h3 className="text-2xl py-1 font-semibold">Contact</h3>
                         <h4 className="py-2">
                             <strong>Phone: </strong>
@@ -52,7 +52,7 @@ const page = () => {
                         </h4>
                     </div>
 
-                    <div className="w-full px-10 py-6 bg-gray-200 text-gray-800 rounded-xl">
+                    <div className="w-full px-10 py-6 bg-gray-200 text-gray-800 rounded-xl shadow border border-gray-300">
                         <h3 className="text-2xl py-1 font-semibold">Address</h3>
                         <h4 className="py-2"><strong>Addresses: </strong>USA: 968 NORFOLK SQ Norfolk  VA  ,23502
 
@@ -62,7 +62,7 @@ const page = () => {
                     </div>
 
                 </div>
-                <div className="flex flex-row md:flex-col md:w-[50%] md:py-0 py-4 w-full h-full items-center justify-start ">
+                <div className="flex md:mx-14 my-4 flex-row md:flex-col md:w-[50%] md:py-0 py-4 w-full h-full items-center justify-start shadow border border-gray-300">
                     <ContactFormNet />
                 </div>
 

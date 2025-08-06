@@ -1,14 +1,12 @@
 'use client';
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useRef } from 'react';
+import * as motion from "motion/react-client"
 
 const Headers = ({
     text,
-    color = '',
-    size = '',
-    font = '',
-    element: Element = 'h1',
-    width = '',
+
+    element,
+    classname,
     initial,
     animate,
     whileInView,
@@ -16,20 +14,22 @@ const Headers = ({
     viewport,
     variants,
 }) => {
-    const MotionElement = motion(Element);
+    const scrollRef = useRef(null)
+
+    const MotionTag = motion[element];
 
     return (
-        <MotionElement
-            initial={initial}
-            animate={animate}
-            whileInView={whileInView}
-            transition={transition}
-            viewport={viewport}
-            variants={variants}
-            className={`${size} ${color} ${width} ${font}`}
-        >
-            {text}
-        </MotionElement>
+        <div ref={scrollRef} >
+            <MotionTag
+                initial={initial}
+                animate={animate}
+                whileInView={whileInView}
+                viewport={{ root: scrollRef }}
+                className={`${classname}`}
+            >
+                {text}
+            </MotionTag>
+        </div>
     );
 };
 
