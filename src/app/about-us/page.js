@@ -58,7 +58,7 @@ const page = () => {
             <section className=" py-32 flex md:flex-row gap-4 flex-col items-stretch justify-center w-full px-4  md:pt-16 pt-16 gap-y-4">
                 <div className="flex flex-col rounded-full px-6 py-36 space-y-8 max-w-sm bg-gray-800 text-center ">
                     <h3 className="text-3xl font-semibold text-blue-200">Our Mission</h3>
-                    <p className="text-xl">
+                    <p className="text-xl text-gray-400">
                         Our mission is to build meaningful technology with happy customers and a motivated,
                         dynamic team. To us, customers aren't just clients — they’re family.
                         Their happiness drives our innovation.
@@ -67,7 +67,7 @@ const page = () => {
                 </div>
                 <div className="flex flex-col rounded-full px-6 py-36  space-y-8 max-w-sm max-h-xs bg-gray-800 text-center ">
                     <h3 className="text-3xl font-semibold text-blue-200 ">Our Mission</h3>
-                    <p className="text-xl ">
+                    <p className="text-xl text-gray-400">
                         Our mission is to build meaningful technology with happy customers and a motivated,
                         dynamic team. To us, customers aren't just clients — they’re family.
                         Their happiness drives our innovation.
@@ -76,7 +76,7 @@ const page = () => {
                 </div>
                 <div className="flex flex-col rounded-full px-6 py-36  space-y-8 max-w-sm  bg-gray-800 text-center ">
                     <h3 className="text-3xl font-semibold text-blue-200">Our Values</h3>
-                    <p className="text-xl ">
+                    <p className="text-xl text-gray-400">
                         We value trust, transparency, and teamwork. Innovation guides us, integrity grounds us,
                         and our customers' success is at the heart of everything we do.
                     </p>
@@ -89,7 +89,7 @@ const page = () => {
                     <h2 className="text-5xl md:max-w-sm">
                         Let’s discuss your vision with us!
                     </h2>
-                    <p className="text-lg max-w-xl">
+                    <p className="text-lg max-w-xl ">
                         Our ability to partner to create new approaches and deliver what we promise with proven and reliable services.
                     </p>
 
