@@ -13,9 +13,6 @@ const Navbar = () => {
 
     const pathname = usePathname();
 
-    console.log(pathname);
-
-
     const handleScroll = useCallback(() => {
         setIsScrolled(window.scrollY > 50);
     }, []);

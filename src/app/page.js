@@ -4,6 +4,8 @@ import { constructMetadata } from "./metadata";
 import Headers from "./components/reusetext/Headers";
 import ScrollReveal from "./components/testcases/ScrollReveal";
 import Animation from "./components/particles/Animation";
+import LogoImageComponent from "./components/partnersImage/logoImageComponent";
+import React from "react";
 
 
 export const metadata = constructMetadata({
@@ -52,6 +54,40 @@ export default function Home() {
       description: 'Understand and outperform competition with real-time market data',
     }
   ]
+
+  const partners = [
+    {
+      key: 1,
+      image: '/Coca-Cola_logo.svg',
+      width: 250,
+      height: 250,
+      name: 'Cococola'
+    },
+    {
+      key: 2,
+      image: '/The_Boston_Beer_Company_Inc.svg',
+      width: 250,
+      height: 250,
+      name: 'The Boston Beer Company'
+    },
+    {
+      key: 3,
+      image: '/ocrolus.svg',
+      width: 250,
+      height: 250,
+      name: 'Ocrolus'
+    },
+    {
+      key: 4,
+      image: '/vitaclay.svg',
+      width: 250,
+      height: 250,
+      name: 'Vitaclay'
+    },
+
+
+  ]
+
   return (
     <div className=" text-white font-sans flex flex-col pb-32">
 
@@ -63,7 +99,7 @@ export default function Home() {
           key="canonical"
         />
       </Head> */}
-                <Animation />
+      <Animation />
 
       <section className=" flex flex-col md:flex-row md:justify-between w-full h-[90vh] md:min-h-screen md:h-screen bg-black ">
         <div className="flex flex-col lg:w-[50%] h-full justify-center items-center md:items-start  px-4">
@@ -77,7 +113,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
           />
-             <Headers
+          <Headers
             text="Align strategy with shopper behavior using AI-powered tools."
             element="h1"
             classname={'bg-gradient-to-r from-blue-300 via-white to-pink-300 bg-clip-text text-transparent  max-w-xl pt-4 text-lg'}
@@ -85,7 +121,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
           />
           <h2 className="">
-            
+
           </h2>
         </div>
         <div className="relative md:order-none order-first flex w-full md:w-[50%] h-full items-center justify-center">
@@ -111,36 +147,15 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
         />
         <div className="w-full flex justify-center md:gap-x-6 md:gap-y-16 gap-y-4 gap-x-4 pt-24 flex-wrap">
-          <Image
-            src={'/Coca-Cola_logo.svg'}
-            width={250}
-            height={250}
-            alt='Filetext icon'
-            className='w-64 md:w-56 py-2 p-6 border border-gray-300 rounded-full'
-          />
-          <Image
-            src={'/The_Boston_Beer_Company_Inc.svg'}
-            width={250}
-            height={250}
-            alt='Filetext icon'
-            className='w-64 md:w-56 py-2 p-6 border border-gray-300 rounded-full'
-          />
-          <Image
-            src={'/ocrolus.svg'}
-            width={250}
-            height={250}
-            alt='Filetext icon'
-            className='w-64 md:w-56 py-2 p-6 border border-gray-300 rounded-full'
-          />
-          <Image
-            src={'/vitaclay.svg'}
-            width={250}
-            height={400}
-            alt='Filetext icon'
-            className='w-64 md:w-56 py-2 p-6 border border-gray-300 rounded-full'
-          />
+          {
+            partners.map(item => (
+              <React.Fragment key={item.key}>
+                <LogoImageComponent data={item} />
+              </React.Fragment>
+            ))
+          }
         </div>
-      </section>
+      </section >
       <section className="flex flex-col justify-center items-center w-full px-4 pt-32 rounded-xl">
         <Headers
           text="Why Choose us ?"
@@ -245,6 +260,6 @@ export default function Home() {
           </button>
         </form>
       </section>
-    </div>
+    </div >
   );
 }
