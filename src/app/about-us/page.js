@@ -55,48 +55,46 @@ const page = () => {
 
                 </div>
             </section>
-            <section className=" py-32 flex md:flex-row gap-4 flex-col items-stretch justify-center w-full px-4  md:pt-16 pt-16 gap-y-4">
-                <div className="flex flex-col rounded-full px-6 py-36 space-y-8 max-w-sm bg-gray-800 text-center ">
+            <section className="py-16 flex md:flex-row flex-col gap-4 justify-center w-full px-4">
+                <div className="flex flex-col px-6 py-12 space-y-8 max-w-sm bg-gray-800 text-center text-white aspect-[1] rounded-[50%/20%]">
                     <h3 className="text-3xl font-semibold text-blue-200">Our Mission</h3>
                     <p className="text-xl text-gray-400">
                         Our mission is to build meaningful technology with happy customers and a motivated,
                         dynamic team. To us, customers aren't just clients — they’re family.
                         Their happiness drives our innovation.
                     </p>
-
                 </div>
-                <div className="flex flex-col rounded-full px-6 py-36  space-y-8 max-w-sm max-h-xs bg-gray-800 text-center ">
-                    <h3 className="text-3xl font-semibold text-blue-200 ">Our Mission</h3>
+
+                <div className="flex flex-col px-6 py-12 space-y-8 max-w-sm bg-gray-800 text-center text-white aspect-[1] rounded-[50%/20%]">
+                    <h3 className="text-3xl font-semibold text-blue-200">Our Vision</h3>
                     <p className="text-xl text-gray-400">
-                        Our mission is to build meaningful technology with happy customers and a motivated,
-                        dynamic team. To us, customers aren't just clients — they’re family.
-                        Their happiness drives our innovation.
+                        To be a trusted partner in our customers’ success — delivering innovative, high-quality
+                        software solutions with operational excellence.
                     </p>
-
                 </div>
-                <div className="flex flex-col rounded-full px-6 py-36  space-y-8 max-w-sm  bg-gray-800 text-center ">
+
+                <div className="flex flex-col px-6 py-12 space-y-8 max-w-sm bg-gray-800 text-center text-white aspect-[1] rounded-[50%/20%]">
                     <h3 className="text-3xl font-semibold text-blue-200">Our Values</h3>
                     <p className="text-xl text-gray-400">
                         We value trust, transparency, and teamwork. Innovation guides us, integrity grounds us,
                         and our customers' success is at the heart of everything we do.
                     </p>
-
                 </div>
-
             </section>
-            <section className="bg-black rounded-4xl py-32 flex md:flex-row gap-4 flex-col items-stretch justify-center w-full px-4  md:pt-16 pt-16 gap-y-4">
-                <div className="md:w-[50%] w-full bg-gray-900/50 flex flex-col justify-center space-y-6 items-start md:px-4  py-4 px-4">
+
+            <section className=" rounded-4xl py-32 flex md:flex-row flex-col items-stretch justify-center w-full px-4  md:pt-16 pt-16 gap-y-4">
+                <div className="md:w-[50%] w-full bg-black flex flex-col justify-center space-y-6 items-start md:px-4  py-4 px-4">
                     <h2 className="text-5xl md:max-w-sm">
                         Let’s discuss your vision with us!
                     </h2>
-                    <p className="text-lg max-w-xl ">
+                    <p className="text-lg max-w-xl py-16">
                         Our ability to partner to create new approaches and deliver what we promise with proven and reliable services.
                     </p>
 
                 </div>
-                <div className="md:w-[50%] w-full bg-gray-900/50 flex justify-center items-center">
+                <div className="md:w-[50%] w-full bg-black flex justify-center items-center">
 
-                    <ContactFormNet />
+                    <ContactFormNet color={'text-gray-400'} />
                 </div>
             </section>
         </div>

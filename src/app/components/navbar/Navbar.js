@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React, { useState, useEffect, useCallback } from 'react';
 import CalendlyModal from '../calendly/CalendlyModal';
+import Image from 'next/image';
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -13,7 +14,7 @@ const Navbar = () => {
     const pathname = usePathname();
 
     console.log(pathname);
-    
+
 
     const handleScroll = useCallback(() => {
         setIsScrolled(window.scrollY > 50);
@@ -82,10 +83,12 @@ const Navbar = () => {
 
                     <div className="flex items-center relative z-10">
                         <Link href="/" className="transition-transform duration-300 hover:scale-105">
-                            <img
+                            <Image
+                                width={500}
+                                height={500}
                                 src="/BlueCompute_large-logo.png"
                                 alt="Bluecompute Logo"
-                                className={`transition-all duration-500 w-40 md:w-40 lg:w-52 ${isScrolled ?
+                                className={`transition-all duration-500 w-40 md:w-40 lg:w-64 ${isScrolled ?
                                     '' :
                                     ''
                                     }`}
@@ -94,36 +97,35 @@ const Navbar = () => {
                     </div>
                     <div className="hidden lg:flex items-center space-x-6 z-20">
                         <Link href='/' title='Home Bluecompute'
-                            className={`cursor-pointer relative   group py-2 px-3 transition-all duration-200 ${pathname === '/' ? 'text-blue-500 font-semibold ' : 'text-white'
+                            className={`cursor-pointer relative uppercase  group py-2 px-3 transition-all duration-200 ${pathname === '/' ? 'underline underline-offset-8 text-white font-semibold ' : 'text-white'
                                 }`}
                         >
                             Home
-                            
+
                         </Link>
-                        {/* <Link href={'/about'} title="About us Bluecompute">
-                            <div className={`py-2 px-3  text-gray-700 hover:text-violet-600 transition-all duration-200 relative group ${pathname === '/about' ? 'text-violet-600' : ''
-                                }`}>
-                                About
-                                <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-violet-600 transform origin-left transition-transform duration-300 ${pathname === '/about' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
-                                    }`}></span>
-                            </div>
-                        </Link> */}
-                      <Link href='/contact/' title='Contact Bluecompute'
-                            className={`cursor-pointer relative   group py-2 px-3 transition-all duration-200 ${pathname === '/contact/' ? 'text-blue-500 font-semibold ' : 'text-white'
+
+                        <Link href='/contact/' title='Contact Bluecompute'
+                            className={`cursor-pointer uppercase relative   group py-2 px-3 transition-all duration-200 ${pathname === '/contact/' ? 'underline underline-offset-8 text-white font-semibold ' : 'text-white'
                                 }`}
                         >
-                                Contact
-                     
-                        </Link> 
+                            Contact
+
+                        </Link>
                         <Link href='/about-us/' title='About Bluecompute'
-                            className={`cursor-pointer relative   group py-2 px-3 transition-all duration-200 ${pathname === '/about-us/' ? 'text-blue-500 font-semibold ' : 'text-white'
+                            className={`cursor-pointer relative  uppercase group py-2 px-3 transition-all duration-200 ${pathname === '/about-us/' ? 'underline underline-offset-8 text-white font-semibold ' : 'text-white'
                                 }`}
                         >
-                                About us
-                     
-                        </Link> 
+                            About us
+
+                        </Link>
+                        <Link href={'/services'} title="About us Bluecompute"
+                            className={`cursor-pointer relative  uppercase group py-2 px-3 transition-all duration-200 ${pathname === '/services/' ? 'underline underline-offset-8 text-white font-semibold ' : 'text-white'}`}>
+
+                            Services
+
+                        </Link>
                     </div>
-                     <CalendlyModal />
+                    <CalendlyModal />
                     <div className="lg:hidden z-50 mobile-menu-container">
                         <button
                             onClick={toggleMobileMenu}
@@ -179,8 +181,8 @@ const Navbar = () => {
                             </Link>
                             <Link href={'/about-us'} title="About us Bluecompute" onClick={closeMobileMenu}>
                                 <div className={`group px-6 py-4 rounded-2xl transition-all duration-300 
-                                flex items-center hover:bg-white/80 hover:shadow-lg hover:scale-[1.02] 
-                                ${pathname === '/about-us' ? 'bg-violet-100/70 text-blue-700 shadow-md' : 'text-gray-700'
+                                flex items-center hover:shadow-lg hover:scale-[1.02] 
+                                ${pathname === '/about-us' ? 'bg-violet-100/70 text-blue-700 shadow-md' : 'text-gray-100'
                                     }`}>
                                     <div className="flex items-center justify-center w-10 h-10 rounded-xl 
                                     bg-gradient-to-br from-[#1a1a2e] to-[#0f0f23] text-white mr-4 
@@ -215,6 +217,39 @@ const Navbar = () => {
                                         <div className={`text-sm text-gray-300`}>Get in touch</div>
                                     </div>
                                     {pathname === '/contact/' && (
+                                        <div className="ml-auto w-2 h-2 bg-[#1a1a2e] rounded-full animate-pulse"></div>
+                                    )}
+                                </div>
+                            </Link>
+                            <Link href={'/services/'} title="Services of Bluecompute" onClick={closeMobileMenu}>
+                                <div className={`group px-6 py-4 rounded-2xl transition-all duration-300 
+                                flex items-center hover:shadow-lg hover:scale-[1.02] 
+                                ${pathname === '/services/' ? 'bg-violet-100/70 text-blue-700 shadow-md' : 'text-gray-100'
+                                    }`}>
+                                    <div className="flex items-center justify-center w-10 h-10 rounded-xl 
+                                    bg-gradient-to-br from-[#1a1a2e] to-[#0f0f23] text-white mr-4 
+                                     group-hover:scale-110 transition-transform duration-300">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            className="w-5 h-5 text-blue-400"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                            strokeWidth="1.5"
+                                        >
+                                            <path
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.591 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.592c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.591c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.592 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.591-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.592c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.591c-.94-1.543.826-3.31 2.37-2.37.996.608 2.285.07 2.591-1.065z"
+                                            />
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <div className="font-semibold text-md">Services</div>
+                                        <div className={`text-sm text-gray-300`}>Smart. Scalable. Reliable.</div>
+                                    </div>
+                                    {pathname === '/services/' && (
                                         <div className="ml-auto w-2 h-2 bg-[#1a1a2e] rounded-full animate-pulse"></div>
                                     )}
                                 </div>

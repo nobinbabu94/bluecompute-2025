@@ -63,7 +63,7 @@ const page = () => {
 
                 </div>
                 <div className="flex md:mx-14 my-4 flex-row md:flex-col md:w-[50%] md:py-0 py-4 w-full h-full items-center justify-start shadow border border-gray-300">
-                    <ContactFormNet />
+                    <ContactFormNet color={'text-gray-800'}/>
                 </div>
 
 
