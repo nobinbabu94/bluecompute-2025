@@ -1,11 +1,11 @@
 // import Head from "next/head";
 import Image from "next/image";
 import { constructMetadata } from "./metadata";
-import Headers from "./components/reusetext/Headers";
+import Headers from "./components/reuse/Headers";
 import ScrollReveal from "./components/testcases/ScrollReveal";
 import Animation from "./components/particles/Animation";
-import LogoImageComponent from "./components/partnersImage/logoImageComponent";
 import React from "react";
+import LogoImageComponent from "./components/reuse/LogoImageComponent";
 
 
 export const metadata = constructMetadata({
@@ -143,8 +143,7 @@ export default function Home() {
           text="Proudly Trusted by Top Retail Stores Around You"
           classname={"text-gray-800 text-2xl md:text-4xl max-w-full font-semibold"}
           element="h3"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
+          
         />
         <div className="w-full flex justify-center md:gap-x-6 md:gap-y-16 gap-y-4 gap-x-4 pt-24 flex-wrap">
           {
@@ -155,14 +154,14 @@ export default function Home() {
             ))
           }
         </div>
+       
       </section >
       <section className="flex flex-col justify-center items-center w-full px-4 pt-32 rounded-xl">
         <Headers
           text="Why Choose us ?"
           classname={"text-gray-800 text-3xl md:text-4xl font-semibold max-w-full"}
           element="h3"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
+         
         />
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 place-items-center pt-24">
           {services.map((service, index) => (
@@ -182,8 +181,7 @@ export default function Home() {
           text="Our Expertise"
           classname={"text-gray-800 text-3xl md:text-4xl font-semibold max-w-full"}
           element="h3"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
+         
         />
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 md:gap-x-6 md:gap-y-16 gap-y-4 gap-x-4  place-items-center pt-24">
           <Image

@@ -1,10 +1,13 @@
 import React from "react";
 import Animation from "../components/particles/Animation";
+import ServiceCard from "../components/reuse/ServiceCard.js";
 
 const page = () => {
+
+
     return (
         <div className=" text-white font-sans flex flex-col pb-32">
-                <Animation />
+            <Animation />
 
             <section className="relative flex flex-col justify-center items-center w-full h-[88vh]  bg-black px-4">
                 <h1 className="text-6xl ">
@@ -25,15 +28,17 @@ const page = () => {
             </section>
             {/* <div className="w-full h-screen inset-0 z-0"> */}
             {/* </div> */}
-            <section className="relative min-h-screen bg-gradient-to-b from-black via-black to-gray-900 py-32 flex md:flex-row flex-col justify-between items-start w-full px-4 md:pt-32 pt-16">
+            <section className="relative py-32 bg-gradient-to-b from-black via-black to-gray-900 
+            flex  w-full px-4 ">
 
-                <div className="flex flex-col w-full gap-2 h-full items-center justify-center md:px-28 text-center">
+                <div className="flex  w-full  items-center justify-center md:px-28 text-center">
                     <p className="text-gray-500 text-2xl md:max-w-7xl">
                         We craft with purpose — building high-performing products that are both reliable and user-friendly,
                         combining expert development with intelligent validation at every step.
                     </p>
                 </div>
             </section>
+            <ServiceCard/>
         </div>
     )
 };
