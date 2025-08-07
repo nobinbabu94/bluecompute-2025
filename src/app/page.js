@@ -3,6 +3,7 @@ import Image from "next/image";
 import { constructMetadata } from "./metadata";
 import Headers from "./components/reusetext/Headers";
 import ScrollReveal from "./components/testcases/ScrollReveal";
+import Animation from "./components/particles/Animation";
 
 
 export const metadata = constructMetadata({
@@ -62,6 +63,8 @@ export default function Home() {
           key="canonical"
         />
       </Head> */}
+                <Animation />
+
       <section className=" flex flex-col md:flex-row md:justify-between w-full h-[90vh] md:min-h-screen md:h-screen bg-black ">
         <div className="flex flex-col lg:w-[50%] h-full justify-center items-center md:items-start  px-4">
           {/* <h1 className="text-6xl max-w-2xl">

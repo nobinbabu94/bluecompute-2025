@@ -2,6 +2,7 @@ import React from "react";
 import ContactFrom from "../components/contact/ContactForm";
 import { constructMetadata } from "../metadata";
 import ContactFormNet from "../components/contact/ContactFormNet";
+import Animation from "../components/particles/Animation";
 
 
 export const metadata = constructMetadata({
@@ -20,9 +21,10 @@ export const metadata = constructMetadata({
 
 const page = () => {
     return (
-        <div className=" text-white font-sans flex flex-col pb-32 gap-4">
-            <section className="relative flex flex-col justify-center items-center w-full h-[88vh]  bg-black px-4">
-                <h1 className="text-6xl ">
+        <div className=" text-white font-sans flex flex-col pb-32 gap-4">            
+            <section className="relative flex flex-col justify-center items-center w-full h-[88vh] overflow-hidden bg-black px-4">
+                <Animation />
+                 <h1 className="text-6xl ">
                     Contact us
                 </h1>
                 <div className="absolute bottom-4 flex flex-col items-center justify-center mt-8 animate-bounce">
@@ -37,6 +39,7 @@ const page = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                     </svg>
                 </div>
+             
             </section>
             <section className="flex md:flex-row flex-col justify-between items-start bg-gray-200  w-full px-4 md:pt-32 pt-16">
                 <div className="flex flex-col md:w-[50%] w-full gap-2 h-full items-center justify-center ">

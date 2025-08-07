@@ -2,6 +2,7 @@ import React from "react";
 import { constructMetadata } from "../metadata";
 import Image from "next/image";
 import ContactFormNet from "../components/contact/ContactFormNet";
+import Animation from "../components/particles/Animation";
 
 export const metadata = constructMetadata({
     title: "About Us | Bluecompute",
@@ -20,6 +21,7 @@ export const metadata = constructMetadata({
 const page = () => {
     return (
         <div className=" text-white font-sans flex flex-col pb-32">
+              
             <section className="relative flex flex-col justify-center items-center w-full h-[88vh]  bg-black px-4">
                 <h1 className="text-6xl ">
                     About us
@@ -37,6 +39,7 @@ const page = () => {
                     </svg>
                 </div>
             </section>
+              <Animation />
             <section className="bg-gradient-to-b from-black via-black to-gray-900 py-32 flex md:flex-row flex-col justify-between items-start w-full px-4 md:pt-32 pt-16">
                 <div className="flex flex-col w-full gap-2 h-full items-center justify-center md:px-28 text-center">
                     <Image
