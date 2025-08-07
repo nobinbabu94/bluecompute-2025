@@ -101,13 +101,7 @@ const Navbar = () => {
 
                         </Link>
 
-                        <Link href='/contact/' title='Contact Bluecompute'
-                            className={`cursor-pointer uppercase relative   group py-2 px-3 transition-all duration-200 ${pathname === '/contact/' ? 'underline underline-offset-8 text-white font-semibold ' : 'text-white'
-                                }`}
-                        >
-                            Contact
 
-                        </Link>
                         <Link href='/about-us/' title='About Bluecompute'
                             className={`cursor-pointer relative  uppercase group py-2 px-3 transition-all duration-200 ${pathname === '/about-us/' ? 'underline underline-offset-8 text-white font-semibold ' : 'text-white'
                                 }`}
@@ -119,6 +113,13 @@ const Navbar = () => {
                             className={`cursor-pointer relative  uppercase group py-2 px-3 transition-all duration-200 ${pathname === '/services/' ? 'underline underline-offset-8 text-white font-semibold ' : 'text-white'}`}>
 
                             Services
+
+                        </Link>
+                        <Link href='/contact/' title='Contact Bluecompute'
+                            className={`cursor-pointer uppercase relative   group py-2 px-3 transition-all duration-200 ${pathname === '/contact/' ? 'underline underline-offset-8 text-white font-semibold ' : 'text-white'
+                                }`}
+                        >
+                            Contact
 
                         </Link>
                     </div>
@@ -197,27 +198,7 @@ const Navbar = () => {
                                     )}
                                 </div>
                             </Link>
-                            <Link href={'/contact/'} title="Contact Bluecompute" onClick={closeMobileMenu}>
-                                <div className={`group px-6 py-4 rounded-2xl transition-all duration-300 
-                                flex items-center hover:shadow-lg hover:scale-[1.02] 
-                                ${pathname === '/contact/' ? 'bg-violet-100/70 text-blue-700 shadow-md' : 'text-gray-100'
-                                    }`}>
-                                    <div className="flex items-center justify-center w-10 h-10 rounded-xl 
-                                    bg-gradient-to-br from-[#1a1a2e] to-[#0f0f23] text-white mr-4 
-                                     group-hover:scale-110 transition-transform duration-300">
-                                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                        </svg>
-                                    </div>
-                                    <div>
-                                        <div className="font-semibold text-md">Contact</div>
-                                        <div className={`text-sm text-gray-300`}>Get in touch</div>
-                                    </div>
-                                    {pathname === '/contact/' && (
-                                        <div className="ml-auto w-2 h-2 bg-[#1a1a2e] rounded-full animate-pulse"></div>
-                                    )}
-                                </div>
-                            </Link>
+
                             <Link href={'/services/'} title="Services of Bluecompute" onClick={closeMobileMenu}>
                                 <div className={`group px-6 py-4 rounded-2xl transition-all duration-300 
                                 flex items-center hover:shadow-lg hover:scale-[1.02] 
@@ -247,6 +228,27 @@ const Navbar = () => {
                                         <div className={`text-sm text-gray-300`}>Smart. Scalable. Reliable.</div>
                                     </div>
                                     {pathname === '/services/' && (
+                                        <div className="ml-auto w-2 h-2 bg-[#1a1a2e] rounded-full animate-pulse"></div>
+                                    )}
+                                </div>
+                            </Link>
+                            <Link href={'/contact/'} title="Contact Bluecompute" onClick={closeMobileMenu}>
+                                <div className={`group px-6 py-4 rounded-2xl transition-all duration-300 
+                                flex items-center hover:shadow-lg hover:scale-[1.02] 
+                                ${pathname === '/contact/' ? 'bg-violet-100/70 text-blue-700 shadow-md' : 'text-gray-100'
+                                    }`}>
+                                    <div className="flex items-center justify-center w-10 h-10 rounded-xl 
+                                    bg-gradient-to-br from-[#1a1a2e] to-[#0f0f23] text-white mr-4 
+                                     group-hover:scale-110 transition-transform duration-300">
+                                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <div className="font-semibold text-md">Contact</div>
+                                        <div className={`text-sm text-gray-300`}>Get in touch</div>
+                                    </div>
+                                    {pathname === '/contact/' && (
                                         <div className="ml-auto w-2 h-2 bg-[#1a1a2e] rounded-full animate-pulse"></div>
                                     )}
                                 </div>
