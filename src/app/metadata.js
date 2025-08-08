@@ -25,7 +25,7 @@ export function generateViewport() {
         width: 'device-width',
         initialScale: 1,
         maximumScale: 1,
-        userScalable: false, // Prevents zoom on mobile
+        userScalable: false,
     }
 }
 

@@ -38,8 +38,8 @@ export default function Animation() {
     },
     interactivity: {
       events: {
-        onHover: { enable: true, mode: "repulse" },
-        onClick: { enable: true, mode: "push" }
+        onHover: { enable: false, mode: "repulse" },
+        onClick: { enable: false, mode: "push" }
       },
       modes: {
         repulse: { distance: 100, duration: 0.4 },

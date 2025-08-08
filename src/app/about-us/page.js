@@ -97,7 +97,7 @@ const page = () => {
                 </div>
                 <div className="md:w-[50%] w-full bg-black flex justify-center items-center">
 
-                    <ContactFormNet color={'text-gray-400'} />
+                    <ContactFormNet color={'text-gray-200'} />
                 </div>
             </section>
         </div>
