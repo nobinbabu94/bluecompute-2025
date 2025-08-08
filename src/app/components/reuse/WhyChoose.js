@@ -1,10 +1,9 @@
 'use client';
 
-import Image from "next/image";
+import React, { useRef } from "react";
 import * as motion from "motion/react-client";
-import { useRef } from "react";
 
-export default function LogoImageComponent({ data ,classname}) {
+const WhyChoose = ({ service }) => {
     const scrollRef = useRef(null)
     return (
         <div ref={scrollRef} style={{ overflow: "hidden" }}>
@@ -18,16 +17,14 @@ export default function LogoImageComponent({ data ,classname}) {
                     }
                 }}
                 viewport={{ root: scrollRef }}
-                className={classname}
+                className="bg-gray-900 text-white p-6 w-full text-center rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 h-full"
             >
-                <Image
-                    src={data?.image}
-                    width={data?.width}
-                    height={data?.height}
-                    alt={data?.name}
-                    className="w-full h-auto"
-                />
+                {/* <div className="flex justify-center mb-4 text-orange-500">{service.icon}</div> */}
+                <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
+                <p className="text-gray-300">{service.description}</p>
             </motion.div>
         </div>
-    );
+    )
 };
+
+export default WhyChoose;

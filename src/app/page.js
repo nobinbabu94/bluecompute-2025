@@ -6,6 +6,7 @@ import ScrollReveal from "./components/testcases/ScrollReveal";
 import Animation from "./components/particles/Animation";
 import React from "react";
 import LogoImageComponent from "./components/reuse/LogoImageComponent";
+import WhyChoose from "./components/reuse/WhyChoose";
 
 
 export const metadata = constructMetadata({
@@ -30,26 +31,31 @@ export default function Home() {
   const services = [
     {
       // icon: <FaHome size={40} />,
+      key: 1,
       title: 'Category Management',
       description: ' Optimize product assortments and shelf layouts to align with shopper behavior',
     },
     {
       // icon: <FaBroom size={40} />,
+      key: 2,
       title: 'Space Planning & Analysis',
       description: 'Maximize shelf efficiency and improve product visibility through intelligent planogram compliance',
     },
     {
       // icon: <FaTruckMoving size={40} />,
+      key: 3,
       title: 'Retail Execution',
       description: 'Real-time tracking of merchandising standards, pricing accuracy, and stock availability',
     },
     {
       // icon: <FaTruckMoving size={40} />,
+      key: 4,
       title: 'In-Store Audits',
       description: 'Automated insights with image-based analytics for fast, consistent store checks',
     },
     {
       // icon: <FaTruckMoving size={40} />,
+      key: 5,
       title: 'Competitive Benchmarking',
       description: 'Understand and outperform competition with real-time market data',
     }
@@ -86,6 +92,37 @@ export default function Home() {
     },
 
 
+  ]
+
+  const expertise = [
+    {
+      key: 1,
+      image: '/four-azure.svg',
+      width: 250,
+      height: 250,
+      name: 'azure'
+    },
+    {
+      key: 2,
+      image: '/four-docker.svg',
+      width: 250,
+      height: 250,
+      name: 'docker'
+    },
+    {
+      key: 3,
+      image: '/four-gcp.svg',
+      width: 250,
+      height: 250,
+      name: 'gcp'
+    },
+    {
+      key: 4,
+      image: '/four-kubernetes.svg',
+      width: 250,
+      height: 250,
+      name: 'Kubernetes'
+    },
   ]
 
   return (
@@ -143,48 +180,53 @@ export default function Home() {
           text="Proudly Trusted by Top Retail Stores Around You"
           classname={"text-gray-800 text-2xl md:text-4xl max-w-full font-semibold"}
           element="h3"
-          
+
         />
         <div className="w-full flex justify-center md:gap-x-6 md:gap-y-16 gap-y-4 gap-x-4 pt-24 flex-wrap">
           {
             partners.map(item => (
               <React.Fragment key={item.key}>
-                <LogoImageComponent data={item} />
+                <LogoImageComponent data={item}
+                  classname={"w-64 md:w-56 py-2 p-6 border border-gray-300 rounded-full flex justify-center items-center"}
+                />
               </React.Fragment>
             ))
           }
         </div>
-       
+
       </section >
       <section className="flex flex-col justify-center items-center w-full px-4 pt-32 rounded-xl">
         <Headers
           text="Why Choose us ?"
           classname={"text-gray-800 text-3xl md:text-4xl font-semibold max-w-full"}
           element="h3"
-         
+
         />
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 place-items-center pt-24">
           {services.map((service, index) => (
-            <div
-              key={index}
-              className="bg-gray-900 text-white p-6 w-full text-center rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 h-full"
-            >
-              {/* <div className="flex justify-center mb-4 text-orange-500">{service.icon}</div> */}
-              <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-              <p className="text-gray-300">{service.description}</p>
-            </div>
+            <React.Fragment key={service.key}>
+              <WhyChoose service={service} />
+            </React.Fragment>
           ))}
         </div>
       </section>
       <section className="flex flex-col justify-center items-center w-full px-4 pt-32 rounded-xl">
+
         <Headers
           text="Our Expertise"
           classname={"text-gray-800 text-3xl md:text-4xl font-semibold max-w-full"}
           element="h3"
-         
+
         />
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 md:gap-x-6 md:gap-y-16 gap-y-4 gap-x-4  place-items-center pt-24">
-          <Image
+
+          {expertise.map((item, index) => (
+            <React.Fragment key={item.key}>
+              <LogoImageComponent data={item} classname={'w-36 md:w-52 py-2 p-6 rounded-full shadow'} />
+            </React.Fragment>
+          ))}
+
+          {/* <Image
             src={'/four-azure.svg'}
             width={200}
             height={200}
@@ -215,7 +257,7 @@ export default function Home() {
             alt='Filetext icon'
             className='w-36 md:w-52 py-2 p-6 rounded-full shadow'
 
-          />
+          /> */}
         </div>
       </section>
       <section className="flex md:flex-row flex-col justify-around items-center w-full md:gap-0 gap-8 px-4 pt-32 ">
