@@ -59,7 +59,7 @@ const ContactFormNet = ({ color }) => {
     const { name, email, phone, company, message } = formState;
 
     return (
-        <form onSubmit={handleSubmit} name="contact" data-netlify="true"
+        <form onSubmit={handleSubmit} name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true"
             className="md:w-[80%] w-full px-6 py-8 md:py-16  flex flex-col items-center border-grgay-500 rounded-xl">
             <h3 className={`text-2xl ${color}   font-bold`}>Fill The Contact Form</h3>
             <h4 className="text-base text-gray-500 md:text-start text-center">
@@ -78,11 +78,11 @@ const ContactFormNet = ({ color }) => {
                 />
                 <input className="px-3 py-2 text-gray-700 border border-gray-300 focus:outline-1 outline-gray-700 rounded-md"
                     placeholder="Phone Number"
-                    type="phone" name="phone" value={phone} onChange={handleChange}
+                    type="tel" name="phone" value={phone} onChange={handleChange}
                 />
                 <input className="px-3 py-2 text-gray-700 border border-gray-300 focus:outline-1 outline-gray-700 rounded-md"
                     placeholder="Company Name"
-                    type="company" name="company" value={company} onChange={handleChange}
+                    type="text" name="company" value={company} onChange={handleChange}
                 />
 
                 {/* <input className="px-3 py-2 border rounded-md"
@@ -91,7 +91,7 @@ const ContactFormNet = ({ color }) => {
             </div>
             <div className="w-full grid grid-cols-1 sm:grid-cols-1 ">
                 <textarea className="px-3 py-2 text-gray-700 border border-gray-300 focus:outline-1 outline-gray-700 rounded-md w-full h-32 resize-y"
-                    type="message" name="message" value={message} onChange={handleChange}
+                    type="text" name="message" value={message} onChange={handleChange}
                     placeholder="How can we help you?" />
 
             </div>
