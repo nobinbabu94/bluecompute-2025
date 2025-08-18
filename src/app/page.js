@@ -225,19 +225,19 @@ export default function Home() {
 
             <ul className="space-y-3 text-gray-800">
               <li className="flex items-start gap-3">
-                <span className="text-xl">📊</span>
+                <span className="text-xl">⮞</span>
                 <span>Transform massive datasets into interactive charts, graphs, and dashboards.</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-xl">⚡</span>
+                <span className="text-xl">⮞</span>
                 <span>Monitor real-time KPIs to stay ahead of business challenges.</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-xl">📦</span>
+                <span className="text-xl">⮞</span>
                 <span>Track every detail — from stock and orders to promotions, claims, invoicing, and payments.</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-xl">📱</span>
+                <span className="text-xl">⮞</span>
                 <span>Build and share interactive reports in minutes, accessible anytime on desktop or mobile.</span>
               </li>
             </ul>
@@ -249,7 +249,7 @@ export default function Home() {
             <Image
               width={500}
               height={500}
-              src={'/Analyze Dat.webp'}
+              src={'/Analyze-Data.webp'}
               alt={'Analyze Data'}
               className="w-full h-auto rounded-xl shadow-lg ring-1 ring-gray-200 object-cover"
             />
@@ -257,7 +257,53 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="flex md:flex-row flex-col justify-around items-center w-full md:gap-0 gap-8 px-4 pt-32">
+      <section className="flex md:flex-row flex-col justify-around items-center w-full md:gap-0 gap-8 px-4 ">
+        <div className="mx-auto max-w-6xl px-6 py-12 grid gap-10 md:grid-cols-2 items-center">
+          {/* Text */}
+          <div className="space-y-5">
+            <Headers
+              text="Integrated Solutions, Flexible Deployment"
+              classname={"text-gray-800 text-3xl md:text-4xl font-semibold max-w-full"}
+              element="h3"
+
+            />
+
+            <p className="text-gray-600">
+              Seamlessly connect with your existing ecosystem and deploy in the way that works best for your business.
+            </p>
+
+            <ul className="space-y-3 text-gray-800">
+              <li className="flex items-start gap-3">
+                <span className="text-xl">⮞</span>
+                <span>Effortlessly integrate with upstream systems like ERP
+                  and downstream platforms such as distributors’ accounting packages.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-xl">⮞</span>
+                <span>Choose your deployment — on the Cloud for scalability or on-premises for complete control.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-xl">⮞</span>
+                <span>Flexible ownership models — opt for subscription-based SaaS or perpetual licensing to suit your strategy.</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Image area (free space reserved) */}
+          <div className="w-full">
+
+            <Image
+              width={500}
+              height={500}
+              src={'/Integrated-Solutions.webp'}
+              alt={'Analyze Data'}
+              className="w-full h-auto rounded-xl shadow-lg ring-1 ring-gray-200 object-cover"
+            />
+
+          </div>
+        </div>
+      </section>
+      <section className="flex md:flex-row flex-col justify-around items-center w-full md:gap-0 gap-8 px-4">
         <div className="mx-auto max-w-6xl px-6 py-12 grid gap-10 md:grid-cols-2 items-center">
           {/* Text */}
           <div className="space-y-5">
@@ -363,7 +409,7 @@ export default function Home() {
           /> */}
         </div>
       </section>
-      
+
       {/* <section className="flex md:flex-row flex-col justify-around items-center w-full md:gap-0 gap-8 px-4 pt-32 ">
         <div className="flex flex-col justify-start w-full md:w-[50%] px-4 space-y-4">
           <h3 className="text-3xl md:text-4xl md:max-w-md md:text-start text-center font-semibold text-gray-800 ">
