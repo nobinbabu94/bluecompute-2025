@@ -223,21 +223,21 @@ export default function Home() {
               Turn complex data into clear insights with advanced analytics and easy-to-use visual tools.
             </p>
 
-            <ul className="space-y-3 text-gray-800">
-              <li className="flex items-start gap-3">
-                <span className="text-xl">⮞</span>
+            <ul className=" space-y-3 text-gray-800">
+              <li className="flex items-start gap-3 ">
+                <span className="w-2 h-2 mt-2 rounded-full bg-gray-600 shrink-0"></span>
                 <span>Transform massive datasets into interactive charts, graphs, and dashboards.</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-xl">⮞</span>
+                <span className="w-2 h-2 mt-2 rounded-full bg-gray-600 shrink-0"></span>
                 <span>Monitor real-time KPIs to stay ahead of business challenges.</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-xl">⮞</span>
+                <span className="w-2 h-2 mt-2 rounded-full bg-gray-600 shrink-0"></span>
                 <span>Track every detail — from stock and orders to promotions, claims, invoicing, and payments.</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-xl">⮞</span>
+                <span className="w-2 h-2 mt-2 rounded-full bg-gray-600 shrink-0"></span>
                 <span>Build and share interactive reports in minutes, accessible anytime on desktop or mobile.</span>
               </li>
             </ul>
@@ -274,17 +274,25 @@ export default function Home() {
 
             <ul className="space-y-3 text-gray-800">
               <li className="flex items-start gap-3">
-                <span className="text-xl">⮞</span>
-                <span>Effortlessly integrate with upstream systems like ERP
-                  and downstream platforms such as distributors’ accounting packages.</span>
+                <span className="w-2 h-2 mt-2 rounded-full bg-gray-600 shrink-0"></span>
+                <span>
+                  Effortlessly integrate with upstream systems like ERP and downstream
+                  platforms such as distributors’ accounting packages.
+                </span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-xl">⮞</span>
-                <span>Choose your deployment — on the Cloud for scalability or on-premises for complete control.</span>
+                <span className="w-2 h-2 mt-2 rounded-full bg-gray-600 shrink-0"></span>
+                <span>
+                  Choose your deployment — on the Cloud for scalability or on-premises for
+                  complete control.
+                </span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-xl">⮞</span>
-                <span>Flexible ownership models — opt for subscription-based SaaS or perpetual licensing to suit your strategy.</span>
+                <span className="w-2 h-2 mt-2 rounded-full bg-gray-600 shrink-0"></span>
+                <span>
+                  Flexible ownership models — opt for subscription-based SaaS or perpetual
+                  licensing to suit your strategy.
+                </span>
               </li>
             </ul>
           </div>
@@ -323,19 +331,19 @@ export default function Home() {
 
             <ul className="space-y-3 text-gray-800">
               <li className="flex items-start gap-3">
-                {/* <span className="text-xl">📊</span> */}
+                <span className="w-2 h-2 mt-2 rounded-full bg-gray-600"></span>
                 <span>Category Management Reinvented</span>
               </li>
               <li className="flex items-start gap-3">
-                {/* <span className="text-xl">⚡</span> */}
+                <span className="w-2 h-2 mt-2 rounded-full bg-gray-600"></span>
                 <span>Data Modeling & ETL Pipelines</span>
               </li>
               <li className="flex items-start gap-3">
-                {/* <span className="text-xl">📦</span> */}
+                <span className="w-2 h-2 mt-2 rounded-full bg-gray-600"></span>
                 <span>Superset Dashboards</span>
               </li>
               <li className="flex items-start gap-3">
-                {/* <span className="text-xl">📱</span> */}
+                <span className="w-2 h-2 mt-2 rounded-full bg-gray-600"></span>
                 <span>Azure-Based Data Architecture</span>
               </li>
             </ul>
