@@ -1,5 +1,4 @@
 import React from "react";
-import Animation from "../components/particles/Animation";
 import ServiceCard from "../components/reuse/ServiceCard.js";
 
 const page = () => {
@@ -7,8 +6,6 @@ const page = () => {
 
     return (
         <div className=" text-white font-sans flex flex-col pb-32">
-            <Animation />
-
             <section className="relative flex flex-col justify-center items-center w-full h-[88vh]  bg-black px-4">
                 <h1 className="text-6xl ">
                     Services

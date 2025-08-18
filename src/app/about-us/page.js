@@ -2,7 +2,6 @@ import React from "react";
 import { constructMetadata } from "../metadata";
 import Image from "next/image";
 import ContactFormNet from "../components/contact/ContactFormNet";
-import Animation from "../components/particles/Animation";
 
 export const metadata = constructMetadata({
     title: "About Us | Bluecompute",
@@ -39,7 +38,6 @@ const page = () => {
                     </svg>
                 </div>
             </section>
-              <Animation />
             <section className="bg-gradient-to-b from-black via-black to-gray-900 py-32 flex md:flex-row flex-col justify-between items-start w-full px-4 md:pt-32 pt-16">
                 <div className="flex flex-col w-full gap-2 h-full items-center justify-center md:px-28 text-center">
                     <Image
@@ -62,17 +60,20 @@ const page = () => {
                 <div className="flex flex-col px-6 py-12 space-y-8 max-w-sm bg-gray-800 text-center text-white aspect-[1] rounded-[50%/20%]">
                     <h3 className="text-3xl font-semibold text-blue-200">Our Mission</h3>
                     <p className="text-xl text-gray-400">
-                        Our mission is to build meaningful technology with happy customers and a motivated,
-                        dynamic team. To us, customers aren't just clients — they’re family.
-                        Their happiness drives our innovation.
+                        Our mission is to empower businesses with next-generation AI solutions that simplify sales and 
+                        distribution management. We strive to make advanced technology accessible and practical, enabling 
+                        organizations to optimize operations, gain actionable insights, and achieve sustainable growth with 
+                        confidence
                     </p>
                 </div>
 
                 <div className="flex flex-col px-6 py-12 space-y-8 max-w-sm bg-gray-800 text-center text-white aspect-[1] rounded-[50%/20%]">
-                    <h3 className="text-3xl font-semibold text-blue-200">Our Vision</h3>
+                    <h3 className="text-3xl font-semibold text-blue-200">The Outreach Team</h3>
                     <p className="text-xl text-gray-400">
-                        To be a trusted partner in our customers’ success — delivering innovative, high-quality
-                        software solutions with operational excellence.
+                        At the heart of our success is a team that blends deep domain knowledge with cutting-edge technology 
+                        expertise. With years of experience in sales and distribution software, salesforce automation, 
+                        and retail management solutions, our specialists design systems that are powerful, scalable, 
+                        and built to meet the unique demands of the industry.
                     </p>
                 </div>
 

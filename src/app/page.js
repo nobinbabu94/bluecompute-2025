@@ -3,7 +3,6 @@ import Image from "next/image";
 import { constructMetadata } from "./metadata";
 import Headers from "./components/reuse/Headers";
 import ScrollReveal from "./components/testcases/ScrollReveal";
-import Animation from "./components/particles/Animation";
 import React from "react";
 import LogoImageComponent from "./components/reuse/LogoImageComponent";
 import WhyChoose from "./components/reuse/WhyChoose";
@@ -32,8 +31,8 @@ export default function Home() {
     {
       // icon: <FaHome size={40} />,
       key: 1,
-      title: 'Category Management',
-      description: ' Optimize product assortments and shelf layouts to align with shopper behavior',
+      title: 'Collaborate, Plan, Forecast & Replenish',
+      description: 'Stay ahead with smarter demand planning and streamlined supply chain collaboration.',
     },
     {
       // icon: <FaBroom size={40} />,
@@ -136,7 +135,6 @@ export default function Home() {
           key="canonical"
         />
       </Head> */}
-      <Animation />
 
       <section className=" flex flex-col md:flex-row md:justify-between w-full h-[90vh] md:min-h-screen md:h-screen bg-black ">
         <div className="flex flex-col lg:w-[50%] h-full justify-center items-center md:items-start  px-4">
@@ -144,14 +142,14 @@ export default function Home() {
             A smarter approach to- category management
           </h1> */}
           <Headers
-            text="A smarter approach to- category management"
+            text="Redefining Sales & Distribution with Next-Gen Solutions"
             element="h1"
             classname={'max-w-2xl text-4xl md:text-6xl text-white'}
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
           />
           <Headers
-            text="Align strategy with shopper behavior using AI-powered tools."
+            text="Let’s talk today and explore how Outreach software can drive growth, sharpen visibility, and take your business higher."
             element="h1"
             classname={'bg-gradient-to-r from-blue-300 via-white to-pink-300 bg-clip-text text-transparent  max-w-xl pt-4 text-lg'}
             initial={{ opacity: 0, y: 50 }}
@@ -166,7 +164,7 @@ export default function Home() {
           <div className="absolute w-72 h-72 bg-purple-500/20 rounded-full blur-3xl md:top-28 md:left-24 z-0 animate-pulse" />
 
           <img
-            src="/retail-hero-bluecompute.webp"
+            src="/hero-image.png"
             alt="hero image"
             className="md:w-[70%] w-[70%] object-cover z-10 relative pt-4 md:pt-0"
           />
@@ -182,7 +180,7 @@ export default function Home() {
           element="h3"
 
         />
-        <div className="w-full flex justify-center md:gap-x-6 md:gap-y-16 gap-y-4 gap-x-4 pt-24 flex-wrap">
+        <div className="w-full flex justify-center md:gap-x-6 md:gap-y-10 gap-y-4 gap-x-4 pt-24 flex-wrap">
           {
             partners.map(item => (
               <React.Fragment key={item.key}>
@@ -202,12 +200,117 @@ export default function Home() {
           element="h3"
 
         />
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 place-items-center pt-24">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 place-items-stretch pt-24">
           {services.map((service, index) => (
             <React.Fragment key={service.key}>
               <WhyChoose service={service} />
             </React.Fragment>
           ))}
+        </div>
+      </section>
+      <section className="flex md:flex-row flex-col justify-around items-center w-full md:gap-0 gap-8 px-4 pt-32 ">
+        <div className="mx-auto max-w-6xl px-6 py-12 grid gap-10 md:grid-cols-2 items-center">
+          {/* Text */}
+          <div className="space-y-5">
+            <Headers
+              text="Analyze Data for Smarter, Faster Decisions"
+              classname={"text-gray-800 text-3xl md:text-4xl font-semibold max-w-full"}
+              element="h3"
+
+            />
+
+            <p className="text-gray-600">
+              Turn complex data into clear insights with advanced analytics and easy-to-use visual tools.
+            </p>
+
+            <ul className="space-y-3 text-gray-800">
+              <li className="flex items-start gap-3">
+                <span className="text-xl">📊</span>
+                <span>Transform massive datasets into interactive charts, graphs, and dashboards.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-xl">⚡</span>
+                <span>Monitor real-time KPIs to stay ahead of business challenges.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-xl">📦</span>
+                <span>Track every detail — from stock and orders to promotions, claims, invoicing, and payments.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-xl">📱</span>
+                <span>Build and share interactive reports in minutes, accessible anytime on desktop or mobile.</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Image area (free space reserved) */}
+          <div className="w-full">
+
+            <Image
+              width={500}
+              height={500}
+              src={'/Analyze Dat.webp'}
+              alt={'Analyze Data'}
+              className="w-full h-auto rounded-xl shadow-lg ring-1 ring-gray-200 object-cover"
+            />
+
+          </div>
+        </div>
+      </section>
+      <section className="flex md:flex-row flex-col justify-around items-center w-full md:gap-0 gap-8 px-4 pt-32">
+        <div className="mx-auto max-w-6xl px-6 py-12 grid gap-10 md:grid-cols-2 items-center">
+          {/* Text */}
+          <div className="space-y-5">
+            <Headers
+              text="Powerful Features for Modern Retail"
+              classname={"text-gray-800 text-3xl md:text-4xl font-semibold max-w-full"}
+              element="h3"
+
+            />
+
+            <p className="text-gray-600">
+              We bring together advanced analytics, intuitive dashboards, and cloud-native
+              architecture to empower modern retailers and category teams. From shelf data
+              to strategy, our solutions simplify complexity and drive decisions that matter.
+
+            </p>
+
+            <ul className="space-y-3 text-gray-800">
+              <li className="flex items-start gap-3">
+                {/* <span className="text-xl">📊</span> */}
+                <span>Category Management Reinvented</span>
+              </li>
+              <li className="flex items-start gap-3">
+                {/* <span className="text-xl">⚡</span> */}
+                <span>Data Modeling & ETL Pipelines</span>
+              </li>
+              <li className="flex items-start gap-3">
+                {/* <span className="text-xl">📦</span> */}
+                <span>Superset Dashboards</span>
+              </li>
+              <li className="flex items-start gap-3">
+                {/* <span className="text-xl">📱</span> */}
+                <span>Azure-Based Data Architecture</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Image area (free space reserved) */}
+          <div className="w-full flex justify-center">
+            <Image
+              width={500}
+              height={500}
+              src={'/category-management.webp'}
+              alt={'Analyze Data'}
+              className="w-96 h-auto rounded-xl shadow-lg ring-1 ring-gray-200 object-cover"
+            />
+            {/* <img
+              src={'/category-management.webp'}
+              alt={'Analyze Data'}
+              className="w-full h-auto rounded-xl shadow-lg ring-1 ring-gray-200 object-cover"
+            /> */}
+
+          </div>
         </div>
       </section>
       <section className="flex flex-col justify-center items-center w-full px-4 pt-32 rounded-xl">
@@ -222,7 +325,7 @@ export default function Home() {
 
           {expertise.map((item, index) => (
             <React.Fragment key={item.key}>
-              <LogoImageComponent data={item} classname={'w-36 md:w-52 py-2 p-6 rounded-full shadow'} />
+              <LogoImageComponent data={item} classname={'w-36 md:w-44 py-2 p-6 rounded-full shadow'} />
             </React.Fragment>
           ))}
 
@@ -260,7 +363,8 @@ export default function Home() {
           /> */}
         </div>
       </section>
-      <section className="flex md:flex-row flex-col justify-around items-center w-full md:gap-0 gap-8 px-4 pt-32 ">
+      
+      {/* <section className="flex md:flex-row flex-col justify-around items-center w-full md:gap-0 gap-8 px-4 pt-32 ">
         <div className="flex flex-col justify-start w-full md:w-[50%] px-4 space-y-4">
           <h3 className="text-3xl md:text-4xl md:max-w-md md:text-start text-center font-semibold text-gray-800 ">
             Powerful Features for Modern Retail
@@ -283,7 +387,7 @@ export default function Home() {
             alt="Category Management"
           />
         </div>
-      </section>
+      </section> */}
       <section className="flex flex-col bg-black justify-center items-center w-full px-4 mt-32 py-32 rounded-4xl ">
         <h3 className="text-2xl md:text-4xl  font-semibold ">
           Get early access

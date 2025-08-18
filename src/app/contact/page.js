@@ -2,7 +2,6 @@ import React from "react";
 import ContactFrom from "../components/contact/ContactForm";
 import { constructMetadata } from "../metadata";
 import ContactFormNet from "../components/contact/ContactFormNet";
-import Animation from "../components/particles/Animation";
 
 
 export const metadata = constructMetadata({
@@ -23,7 +22,6 @@ const page = () => {
     return (
         <div className=" text-white font-sans flex flex-col pb-32 ">
             <section className="relative flex flex-col justify-center items-center w-full h-[88vh] overflow-hidden bg-black px-4">
-                <Animation />
                 <h1 className="text-6xl ">
                     Contact us
                 </h1>

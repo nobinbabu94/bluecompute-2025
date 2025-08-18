@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React, { useState, useEffect, useCallback } from 'react';
-import CalendlyModal from '../calendly/CalendlyModal';
+// import CalendlyModal from '../calendly/CalendlyModal';
 import Image from 'next/image';
 
 const Navbar = () => {
@@ -115,15 +115,27 @@ const Navbar = () => {
                             Services
 
                         </Link>
-                        <Link href='/contact/' title='Contact Bluecompute'
+                        <Link href={'/products'} title="Products us Bluecompute"
+                            className={`cursor-pointer relative  uppercase group py-2 px-3 transition-all duration-200 ${pathname === '/products/' ? 'underline underline-offset-8 text-white font-semibold ' : 'text-white'}`}>
+
+                            Products
+
+                        </Link>
+                        {/* <Link href='/contact/' title='Contact Bluecompute'
                             className={`cursor-pointer uppercase relative   group py-2 px-3 transition-all duration-200 ${pathname === '/contact/' ? 'underline underline-offset-8 text-white font-semibold ' : 'text-white'
                                 }`}
                         >
                             Contact
 
-                        </Link>
+                        </Link> */}
                     </div>
-                    <CalendlyModal />
+                    {/* <CalendlyModal /> */}
+                    <Link href={'/contact/'} title="Contact Bluecompute" onClick={closeMobileMenu}
+                        className="border border-blue-300 md:py-2 md:px-4 py-1 px-2 text-white cursor-pointer bg-gray-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 rounded-full "
+                    >
+
+                        Contact
+                    </Link>
                     <div className="lg:hidden z-50 mobile-menu-container">
                         <button
                             onClick={toggleMobileMenu}
@@ -155,8 +167,8 @@ const Navbar = () => {
                     <div className="relative border-t border-gray-200/50 pt-6 pb-8 px-4 space-y-3">
 
                         <div className="space-y-2">
-                           
-                             <Link href={'/'} title="Home Bluecompute" onClick={closeMobileMenu}>
+
+                            <Link href={'/'} title="Home Bluecompute" onClick={closeMobileMenu}>
                                 <div className={`group px-6 py-4 rounded-2xl transition-all duration-300 
                                 flex items-center hover:shadow-lg hover:scale-[1.02] 
                                 ${pathname === '/' ? 'bg-violet-100/70 text-blue-700 shadow-md' : 'text-gray-100'
@@ -178,7 +190,7 @@ const Navbar = () => {
                                     )}
                                 </div>
                             </Link>
-                           
+
                             <Link href={'/about-us/'} title="About Bluecompute" onClick={closeMobileMenu}>
                                 <div className={`group px-6 py-4 rounded-2xl transition-all duration-300 
                                 flex items-center hover:shadow-lg hover:scale-[1.02] 
@@ -222,6 +234,27 @@ const Navbar = () => {
                                     )}
                                 </div>
                             </Link>
+                            <Link href={'/products/'} title="Products of Bluecompute" onClick={closeMobileMenu}>
+                                <div className={`group px-6 py-4 rounded-2xl transition-all duration-300 
+                                flex items-center hover:shadow-lg hover:scale-[1.02] 
+                                ${pathname === '/products/' ? 'bg-violet-100/70 text-blue-700 shadow-md' : 'text-gray-100'
+                                    }`}>
+                                    <div className="flex items-center justify-center w-10 h-10 rounded-xl 
+                                    bg-gradient-to-br from-[#1a1a2e] to-[#0f0f23] text-white mr-4 
+                                     group-hover:scale-110 transition-transform duration-300">
+                                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <div className="font-semibold text-md">Products</div>
+                                        <div className={`text-sm text-gray-300`}>Intelligent. Integrated. Future-Ready.</div>
+                                    </div>
+                                    {pathname === '/products/' && (
+                                        <div className="ml-auto w-2 h-2 bg-[#1a1a2e] rounded-full animate-pulse"></div>
+                                    )}
+                                </div>
+                            </Link>
                             <Link href={'/contact/'} title="Contact Bluecompute" onClick={closeMobileMenu}>
                                 <div className={`group px-6 py-4 rounded-2xl transition-all duration-300 
                                 flex items-center hover:shadow-lg hover:scale-[1.02] 
@@ -244,17 +277,22 @@ const Navbar = () => {
                                 </div>
                             </Link>
                         </div>
-                        <div className="pt-6 mt-6 border-t border-gray-200/50">
+                        {/* <div className="pt-6 mt-6 border-t border-gray-200/50">
                             <div className="bg-gradient-to-r from-violet-50 to-indigo-50 rounded-2xl p-6 border border-violet-100">
                                 <div className="text-center mb-4">
                                     <h3 className="text-lg font-semibold text-gray-800 mb-2">Ready to get started?</h3>
                                     <p className="text-sm text-gray-600">Schedule a demo and see RevealNext in action</p>
                                 </div>
                                 <div className="flex justify-center">
-                                    <CalendlyModal />
+                             
+                                    <Link href={'/contact/'} title="Contact Bluecompute" onClick={closeMobileMenu}
+                                        className="border border-blue-300 md:py-2 md:px-4 py-1 px-2 text-white cursor-pointer bg-gray-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 rounded-full "
+                                    >
+                                        Contact
+                                    </Link>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                         <div className="absolute top-4 right-4 w-20 h-20 bg-gradient-to-br from-violet-200/30 to-indigo-200/30 rounded-full blur-xl"></div>
                         <div className="absolute bottom-8 left-4 w-16 h-16 bg-gradient-to-br from-emerald-200/30 to-teal-200/30 rounded-full blur-xl"></div>
                     </div>
