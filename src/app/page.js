@@ -57,6 +57,12 @@ export default function Home() {
       key: 5,
       title: 'Competitive Benchmarking',
       description: 'Understand and outperform competition with real-time market data',
+    },
+    {
+      // icon: <FaTruckMoving size={40} />,
+      key: 6,
+      title: 'Industry-Leading Technology',
+      description: 'Cutting-edge, future-ready solutions built to adapt seamlessly to evolving business needs — ensuring scalability, efficiency, and long-term success.',
     }
   ]
 
