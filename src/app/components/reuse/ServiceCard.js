@@ -49,6 +49,105 @@ const ServiceCard = () => {
                     </div>
 
                 </div> : ''}
+            {selectService === 'Cloud Migration' ?
+                <div className="flex flex-col md:flex-row py-16 ">
+                    <div className="flex flex-col md:w-[50%] w-full p-4 space-y-6">
+                        <h3 className="text-5xl font-semibold">Cloud Migration
+                        </h3>
+                        <div className="flex flex-col space-y-6 font-light">
+                            <p className="indent-4 text-xl text-justify">
+                                There was a time where we didn't need to rely on technology. But things have changed.In this day and age even the smallest of businesses can't imagine operating without technology.
+                            </p>
+                            <p className="indent-4 text-xl text-justify">
+                                Technology is growing and changing at an exponential rate. If we do not keep up with technology, we shall be left behind.                            </p>
+                            <p className="indent-4 text-xl text-justify">
+                                Utilize the full capabilities of the cloud services. Update your legacy application to a scalable and cloud native environment using the modern technology. So that we can meet the modern day user expectation and give the best user experience regardless of the technology change.
+                            </p>
+                            <p className="indent-4 text-xl text-justify">
+                                Our Multi-cloud Deployment Services (MCDS) provide a multi-cloud development solution enabling enterprises to transform infrastructure and modernize the applications.  Our services are pre-integrated and tested with various infrastructure services, application services, and cloud services
+                            </p>
+
+                        </div>
+                    </div>
+                    <div className="flex flex-col justify-center items-center md:w-[50%] p-4 space-y-6">
+                        <Image
+                            src={'/swimlane-build-cloud-apps.webp'}
+                            width={500}
+                            height={500}
+                            alt="Cloud Advisory"
+                        />
+
+                    </div>
+
+                </div> : ''}
+
+            {selectService === 'Application Modernization' ?
+                <div className="flex flex-col md:flex-row py-16 ">
+                    <div className="flex flex-col md:w-[50%] w-full p-4 space-y-6">
+                        <h3 className="text-5xl font-semibold">Application Modernization
+                        </h3>
+                        <div className="flex flex-col space-y-6 font-light">
+                            <p className="indent-4 text-xl text-justify">
+                                There was a time where we didn't need to rely on technology. But things have changed.In this day and age even the smallest of businesses can't imagine operating without technology.
+                            </p>
+                            <p className="indent-4 text-xl text-justify">
+                                Technology is growing and changing at an exponential rate. If we do not keep up with technology, we shall be left behind.
+
+                            </p>
+                            <p className="indent-4 text-xl text-justify">
+                                Utilize the full capabilities of the cloud services. Update your legacy application to a scalable and cloud native environment using the modern technology. So that we can meet the modern day user expectation and give the best user experience regardless of the technology change.
+                            </p>
+                            <p className="indent-4 text-xl text-justify">
+                                Our Multi-cloud Deployment Services (MCDS) provide a multi-cloud development solution enabling enterprises to transform infrastructure and modernize the applications.  Our services are pre-integrated and tested with various infrastructure services, application services, and cloud services
+                            </p>
+
+                        </div>
+                    </div>
+                    <div className="flex flex-col justify-center items-center md:w-[50%] p-4 space-y-6">
+                        <Image
+                            src={'/application-modernization.webp'}
+                            width={500}
+                            height={500}
+                            alt="Cloud Advisory"
+                        />
+
+                    </div>
+
+                </div> : ''}
+
+            {selectService === 'Data & Analytics' ?
+                <div className="flex flex-col md:flex-row py-16 ">
+                    <div className="flex flex-col md:w-[50%] w-full p-4 space-y-6">
+                        <h3 className="text-5xl font-semibold">Data & Analytics
+                        </h3>
+                        <div className="flex flex-col space-y-6 font-light">
+                            <p className="indent-4 text-xl text-justify">
+                                It’s hard for a business to keep track of each and every step we take in business. We are humans after all. No matter how much effort we put in, we are always prone to errors. 
+                            </p>
+                            <p className="indent-4 text-xl text-justify">
+                                One of the best things about adopting cloud technology is that we get to use the benefits of data analytics. Know every move you make and every step you take.
+
+                            </p>
+                            <p className="indent-4 text-xl text-justify">
+                              Get more in-depth analysis and insights of  your business, customers and your clients. Achieve your business goal in an efficient and cost effective manner. 
+                            </p>
+                            <p className="indent-4 text-xl text-justify">
+                               Blue Compute Cloud Services are designed around our customers and delivered on the platform that best meets their needs. Whether you are looking to fix issues, develop a strategy, utilize managed services, or further modernize and secure your applications and infrastructure.
+                            </p>
+
+                        </div>
+                    </div>
+                    <div className="flex flex-col justify-center items-center md:w-[50%] p-4 space-y-6">
+                        <Image
+                            src={'/Data & Analytics.webp'}
+                            width={500}
+                            height={500}
+                            alt="Cloud Advisory"
+                        />
+
+                    </div>
+
+                </div> : ''}
         </section>
     )
 };

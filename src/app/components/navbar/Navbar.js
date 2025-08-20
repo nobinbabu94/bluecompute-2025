@@ -125,29 +125,61 @@ const Navbar = () => {
                             <Link
                                 href={'/products'}
                                 title="Products Bluecompute"
-                                className={`cursor-pointer relative uppercase group py-2 px-3 transition-all duration-200 ${pathname === '/products' ? 'underline underline-offset-8 text-white font-semibold' : 'text-white'
+                                className={`flex items-center  gap-2 cursor-pointer relative uppercase group py-2 px-3 transition-all duration-200 
+      ${pathname === '/products'
+                                        ? 'underline underline-offset-8 text-white font-semibold'
+                                        : 'text-white'
                                     }`}
                             >
                                 Products
+                                <Image
+                                    src={"/arrow-down-sign-to-navigate.svg"}
+                                    height={5}
+                                    width={5}
+                                    alt="arrow-down-sign-to-navigate.svg"
+                                    className={`w-2 h-2 transition-transform duration-300 ease-in-out ${isDropdownOpen ? "rotate-180" : ""
+                                        }`}
+                                />
                             </Link>
 
-                            {isDropdownOpen && (
-                                <div className="absolute top-7 left-0 z-50  bg-gray-900 text-white shadow-lg w-auto min-w-56 rounded-b-lg">
-                                    <ul className="py-2">
-                                        <li className="px-4 py-1 hover:text-blue-300 ">
-                                            <a
-                                                href="https://revealnext.com/"
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="block text-white"
+                            {/* Animated Dropdown */}
+                            <div
+                                className={`absolute top-10 left-3 z-50 w-auto min-w-56  
+      bg-gray-900 text-white shadow-lg transform transition-all duration-300 ease-out 
+      ${isDropdownOpen
+                                        ? 'opacity-100 translate-y-0 scale-100'
+                                        : 'opacity-0 -translate-y-2 scale-95 pointer-events-none'
+                                    }`}
+                            >
+                                <ul className="py-2">
+                                    <li className="px-4 py-2 hover:text-blue-300 transition-colors">
+                                        <a
+                                            href="https://revealnext.com/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center space-x-2"
+                                        >
+                                            <span>RevealNext</span>
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                className="w-3 h-3"
+                                                fill="none"
+                                                viewBox="0 0 24 24"
+                                                stroke="currentColor"
+                                                strokeWidth={2}
                                             >
-                                                RevealNext
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            )}
+                                                <path
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                                                />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
+
 
                         {/* <Link href='/contact/' title='Contact Bluecompute'
                             className={`cursor-pointer uppercase relative   group py-2 px-3 transition-all duration-200 ${pathname === '/contact/' ? 'underline underline-offset-8 text-white font-semibold ' : 'text-white'
@@ -185,132 +217,185 @@ const Navbar = () => {
                         </button>
                     </div>
                 </div>
-                <div className={`lg:hidden bg-gray-600 mobile-menu-container rounded-b-xl transition-all duration-500 ease-out ${showMenu
-                    ? 'max-h-screen opacity-100 visible'
-                    : 'max-h-0 opacity-0 invisible'
-                    } overflow-hidden`}>
+                <div
+                    className={`lg:hidden bg-gray-600 mobile-menu-container rounded-b-xl transition-all duration-500 ease-out 
+    ${showMenu ? "max-h-screen opacity-100 visible" : "max-h-0 opacity-0 invisible"} 
+    overflow-hidden relative`}
+                >
+                    <div className="absolute inset-0 bg-gradient-to-br from-black/90 via-black/50 to-black/90 backdrop-blur-xl z-0"></div>
 
-                    <div className="absolute inset-0 bg-gradient-to-br from-black/90 via-black/50 to-black/90 backdrop-blur-xl"></div>
-
-                    <div className="relative border-t border-gray-200/50 pt-6 pb-8 px-4 space-y-3">
-
+                    <div className="relative z-10 border-t border-gray-200/50 pt-6 pb-8 px-4 space-y-3">
                         <div className="space-y-2">
-
-                            <Link href={'/'} title="Home Bluecompute" onClick={closeMobileMenu}>
-                                <div className={`group px-6 py-4 rounded-2xl transition-all duration-300 
-                                flex items-center hover:shadow-lg hover:scale-[1.02] 
-                                ${pathname === '/' ? 'bg-violet-100/70 text-blue-700 shadow-md' : 'text-gray-100'
-                                    }`}>
-                                    <div className="flex items-center justify-center w-10 h-10 rounded-xl 
-                                    bg-gradient-to-br from-[#1a1a2e] to-[#0f0f23] text-white mr-4 
-                                     group-hover:scale-110 transition-transform duration-300">
-                                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round"
-                                                strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                            <Link href={"/"} title="Home Bluecompute" onClick={closeMobileMenu}>
+                                <div
+                                    className={`group px-6 py-4 rounded-2xl transition-all duration-300 flex items-center 
+            hover:shadow-lg hover:scale-[1.02] 
+            ${pathname === "/" ? "bg-violet-100/70 text-blue-700 shadow-md" : "text-gray-100"}`}
+                                >
+                                    <div
+                                        className="flex items-center justify-center w-10 h-10 rounded-xl 
+              bg-gradient-to-br from-[#1a1a2e] to-[#0f0f23] text-white mr-4 
+              group-hover:scale-110 transition-transform duration-300"
+                                    >
+                                        <svg
+                                            className="w-5 h-5"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                strokeWidth={2}
+                                                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                                            />
                                         </svg>
                                     </div>
                                     <div>
                                         <div className="font-semibold text-md">Home</div>
-                                        <div className={`text-sm text-gray-300`}>Main dashboard</div>
+                                        <div className="text-sm text-gray-300">Main dashboard</div>
                                     </div>
-                                    {pathname === '/' && (
+                                    {pathname === "/" && (
                                         <div className="ml-auto w-2 h-2 bg-[#1a1a2e] rounded-full animate-pulse"></div>
                                     )}
                                 </div>
                             </Link>
-
-                            <Link href={'/about-us/'} title="About Bluecompute" onClick={closeMobileMenu}>
-                                <div className={`group px-6 py-4 rounded-2xl transition-all duration-300 
-                                flex items-center hover:shadow-lg hover:scale-[1.02] 
-                                ${pathname === '/about-us/' ? 'bg-violet-100/70 text-blue-700 shadow-md' : 'text-gray-100'
-                                    }`}>
-                                    <div className="flex items-center justify-center w-10 h-10 rounded-xl 
-                                    bg-gradient-to-br from-[#1a1a2e] to-[#0f0f23] text-white mr-4 
-                                     group-hover:scale-110 transition-transform duration-300">
-                                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                            <Link href={"/about-us/"} title="About Bluecompute" onClick={closeMobileMenu}>
+                                <div
+                                    className={`group px-6 py-4 rounded-2xl transition-all duration-300 flex items-center 
+            hover:shadow-lg hover:scale-[1.02] 
+            ${pathname === "/about-us/" ? "bg-violet-100/70 text-blue-700 shadow-md" : "text-gray-100"}`}
+                                >
+                                    <div
+                                        className="flex items-center justify-center w-10 h-10 rounded-xl 
+              bg-gradient-to-br from-[#1a1a2e] to-[#0f0f23] text-white mr-4 
+              group-hover:scale-110 transition-transform duration-300"
+                                    >
+                                        <svg
+                                            className="w-5 h-5"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                strokeWidth={2}
+                                                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"
+                                            />
                                         </svg>
                                     </div>
                                     <div>
                                         <div className="font-semibold text-md">About Us</div>
-                                        <div className={`text-sm text-gray-300`}>Learn our story</div>
+                                        <div className="text-sm text-gray-300">Learn our story</div>
                                     </div>
-                                    {pathname === '/about-us/' && (
+                                    {pathname === "/about-us/" && (
                                         <div className="ml-auto w-2 h-2 bg-[#1a1a2e] rounded-full animate-pulse"></div>
                                     )}
                                 </div>
                             </Link>
-
-                            <Link href={'/services/'} title="Services of Bluecompute" onClick={closeMobileMenu}>
-                                <div className={`group px-6 py-4 rounded-2xl transition-all duration-300 
-                                flex items-center hover:shadow-lg hover:scale-[1.02] 
-                                ${pathname === '/services/' ? 'bg-violet-100/70 text-blue-700 shadow-md' : 'text-gray-100'
-                                    }`}>
-                                    <div className="flex items-center justify-center w-10 h-10 rounded-xl 
-                                    bg-gradient-to-br from-[#1a1a2e] to-[#0f0f23] text-white mr-4 
-                                     group-hover:scale-110 transition-transform duration-300">
-                                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            <Link href={"/services/"} title="Services of Bluecompute" onClick={closeMobileMenu}>
+                                <div
+                                    className={`group px-6 py-4 rounded-2xl transition-all duration-300 flex items-center 
+            hover:shadow-lg hover:scale-[1.02] 
+            ${pathname === "/services/" ? "bg-violet-100/70 text-blue-700 shadow-md" : "text-gray-100"}`}
+                                >
+                                    <div
+                                        className="flex items-center justify-center w-10 h-10 rounded-xl 
+              bg-gradient-to-br from-[#1a1a2e] to-[#0f0f23] text-white mr-4 
+              group-hover:scale-110 transition-transform duration-300"
+                                    >
+                                        <svg
+                                            className="w-5 h-5"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                strokeWidth={2}
+                                                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.89 
+                  3.31.877 2.42 2.42a1.724 1.724 0 001.065 2.572c1.757.426 
+                  1.757 2.924 0 3.35a1.724 1.724 0 00-1.066 
+                  2.573c.89 1.543-.877 3.31-2.42 2.42a1.724 
+                  1.724 0 00-2.572 1.065c-.426 1.757-2.924 
+                  1.757-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.89-3.31-.877-2.42-2.42a1.724 
+                  1.724 0 00-1.065-2.572c-1.757-.426-1.757-2.924 
+                  0-3.35a1.724 1.724 0 001.066-2.573c-.89-1.543.877-3.31 
+                  2.42-2.42.996.574 2.248-.16 2.573-1.066z"
+                                            />
+                                            <path
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                strokeWidth={2}
+                                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                                            />
                                         </svg>
                                     </div>
                                     <div>
                                         <div className="font-semibold text-md">Services</div>
-                                        <div className={`text-sm text-gray-300`}>Smart. Scalable. Reliable.</div>
+                                        <div className="text-sm text-gray-300">Smart. Scalable. Reliable.</div>
                                     </div>
-                                    {pathname === '/services/' && (
+                                    {pathname === "/services/" && (
                                         <div className="ml-auto w-2 h-2 bg-[#1a1a2e] rounded-full animate-pulse"></div>
                                     )}
                                 </div>
                             </Link>
                             <div
                                 onClick={() => setProductsOpen(!productsOpen)}
-                                className={`group px-6 py-4 rounded-2xl transition-all duration-300 
-                                    flex items-center hover:shadow-lg hover:scale-[1.02] cursor-pointer
-                                    ${pathname === '/products/' ? 'bg-violet-100/70 text-blue-700 shadow-md' : 'text-gray-100'}
-                                `}
+                                className={`group px-6 py-4 rounded-2xl transition-all duration-300 flex items-center 
+          hover:shadow-lg hover:scale-[1.02] cursor-pointer 
+          ${pathname === "/products/" ? "bg-violet-100/70 text-blue-700 shadow-md" : "text-gray-100"}`}
                             >
                                 <div
                                     className="flex items-center justify-center w-10 h-10 rounded-xl 
-                                    bg-gradient-to-br from-[#1a1a2e] to-[#0f0f23] text-white mr-4 
-                                    group-hover:scale-110 transition-transform duration-300"
+            bg-gradient-to-br from-[#1a1a2e] to-[#0f0f23] text-white mr-4 
+            group-hover:scale-110 transition-transform duration-300"
                                 >
-                                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <svg
+                                        className="w-5 h-5"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
                                         <path
                                             strokeLinecap="round"
                                             strokeLinejoin="round"
                                             strokeWidth={2}
-                                            d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                                            d="M4 6h4v4H4V6zm6 0h4v4h-4V6zm6 0h4v4h-4V6zM4 
+                                            12h4v4H4v-4zm6 0h4v4h-4v-4zm6 0h4v4h-4v-4zM4 
+                                            18h4v4H4v-4zm6 0h4v4h-4v-4zm6 0h4v4h-4v-4z"
                                         />
                                     </svg>
                                 </div>
-                                <div className='w-full'>
-                                    <div className="font-semibold text-md flex justify-between w-full">
+                                <div className="w-full">
+                                    <div className="font-semibold text-md flex justify-between w-full items-center">
                                         <span>Products</span>
-                                        <span
-                                            className={` transition-transform duration-300 ease-in-out ${productsOpen ? "rotate-180" : ''}`}
-                                        >
-                                            &#129171;
-                                        </span>
+                                        <Image
+                                            src={"/arrow-down-sign-to-navigate.svg"}
+                                            height={5}
+                                            width={5}
+                                            alt="arrow-down-sign-to-navigate.svg"
+                                            className={`w-3 h-3 transition-transform duration-300 ease-in-out ${productsOpen ? "rotate-180" : ""
+                                                }`}
+                                        />
                                     </div>
-                                    <div className="text-sm text-gray-300">Intelligent. Integrated. Future-Ready.</div>
+                                    <div className="text-sm text-gray-300">
+                                        Intelligent. Integrated. Future-Ready.
+                                    </div>
                                 </div>
-                                {pathname === '/products/' && (
+                                {pathname === "/products/" && (
                                     <div className="ml-auto w-2 h-2 bg-[#1a1a2e] rounded-full animate-pulse"></div>
                                 )}
                             </div>
-
-                            {/* Submenu */}
                             <div
-                                className={`px-4 flex flex-col overflow-hidden transition-all duration-500 ease-in-out 
-                                ${productsOpen ? 'max-h-52 overflow-y-auto opacity-100' : 'max-h-0 opacity-0'}
-                                  ${pathname === '/products/' ? 'bg-violet-100/70 text-blue-700 shadow-md' : 'text-gray-100'}
-                                  `}
+                                className={`px-4 flex flex-col transition-all duration-500 ease-in-out overflow-hidden 
+          ${productsOpen ? "max-h-52 opacity-100" : "max-h-0 opacity-0"} 
+          ${pathname === "/products/" ? "bg-violet-100/70 text-blue-700 shadow-md" : "text-gray-100"}`}
                             >
                                 <ul className="px-4 py-2">
-                                    {/* Internal link */}
-
-                                    {/* External link */}
-                                    <li className="pl-10 py-4 ">
+                                    <li className="pl-10 py-4">
                                         <a
                                             href="https://revealnext.com/"
                                             target="_blank"
@@ -319,35 +404,56 @@ const Navbar = () => {
                                             onClick={() => setShowMenu(false)}
                                         >
                                             <span>RevealNext</span>
-                                            <Image
-                                                src="/external-link-symbol.png"
-                                                width={10}
-                                                height={10}
-                                                alt="external link"
-                                                className="w-5 h-5 filter invert brightness-0"
-                                            />
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                className="w-3 h-3 "
+                                                fill="none"
+                                                viewBox="0 0 24 24"
+                                                stroke="currentColor"
+                                                strokeWidth={2}
+                                            >
+                                                <path
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                                                />
+                                            </svg>
                                         </a>
-
                                     </li>
                                 </ul>
                             </div>
-                            <Link href={'/contact/'} title="Contact Bluecompute" onClick={closeMobileMenu}>
-                                <div className={`group px-6 py-4 rounded-2xl transition-all duration-300 
-                                flex items-center hover:shadow-lg hover:scale-[1.02] 
-                                ${pathname === '/contact/' ? 'bg-violet-100/70 text-blue-700 shadow-md' : 'text-gray-100'
-                                    }`}>
-                                    <div className="flex items-center justify-center w-10 h-10 rounded-xl 
-                                    bg-gradient-to-br from-[#1a1a2e] to-[#0f0f23] text-white mr-4 
-                                     group-hover:scale-110 transition-transform duration-300">
-                                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            <Link href={"/contact/"} title="Contact Bluecompute" onClick={closeMobileMenu}>
+                                <div
+                                    className={`group px-6 py-4 rounded-2xl transition-all duration-300 flex items-center 
+            hover:shadow-lg hover:scale-[1.02] 
+            ${pathname === "/contact/" ? "bg-violet-100/70 text-blue-700 shadow-md" : "text-gray-100"}`}
+                                >
+                                    <div
+                                        className="flex items-center justify-center w-10 h-10 rounded-xl 
+              bg-gradient-to-br from-[#1a1a2e] to-[#0f0f23] text-white mr-4 
+              group-hover:scale-110 transition-transform duration-300"
+                                    >
+                                        <svg
+                                            className="w-5 h-5"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                strokeWidth={2}
+                                                d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 
+                  002-2V7a2 2 0 00-2-2H5a2 2 0 
+                  00-2 2v10a2 2 0 002 2z"
+                                            />
                                         </svg>
                                     </div>
                                     <div>
                                         <div className="font-semibold text-md">Contact</div>
-                                        <div className={`text-sm text-gray-300`}>Get in touch</div>
+                                        <div className="text-sm text-gray-300">Get in touch</div>
                                     </div>
-                                    {pathname === '/contact/' && (
+                                    {pathname === "/contact/" && (
                                         <div className="ml-auto w-2 h-2 bg-[#1a1a2e] rounded-full animate-pulse"></div>
                                     )}
                                 </div>
@@ -355,26 +461,18 @@ const Navbar = () => {
                         </div>
                         <div className="pt-6 mt-6 border-t border-gray-200/50">
                             <div className="bg-gradient-to-r from-violet-50 to-indigo-50 rounded-2xl p-6 border border-violet-100">
-                                <div className="text-center mb-4">
-                                    {/* <h3 className="text-lg font-semibold text-gray-800 mb-2">Ready to get started?</h3> */}
-                                    <p className="text-sm text-gray-600">Our ability to partner to create new approaches and deliver what we promise with proven and reliable services.</p>
-                                </div>
                                 <div className="flex flex-col items-center justify-center">
-                                    {/* <span>Mail us</span> */}
                                     <span>sales@bluecompute.com</span>
                                     <span>408-242-0283</span>
-                                    {/* <Link href={'/contact/'} title="Contact Bluecompute" onClick={closeMobileMenu}
-                                        className="border border-blue-300 md:py-2 md:px-4 py-1 px-2 text-white cursor-pointer bg-gray-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 rounded-full "
-                                    >
-                                        Contact
-                                    </Link> */}
                                 </div>
                             </div>
                         </div>
+
                         <div className="absolute top-4 right-4 w-20 h-20 bg-gradient-to-br from-violet-200/30 to-indigo-200/30 rounded-full blur-xl"></div>
                         <div className="absolute bottom-8 left-4 w-16 h-16 bg-gradient-to-br from-emerald-200/30 to-teal-200/30 rounded-full blur-xl"></div>
                     </div>
                 </div>
+
             </nav>
         </div>
     );
