@@ -142,7 +142,6 @@ const Navbar = () => {
                                 />
                             </Link>
 
-                            {/* Animated Dropdown */}
                             <div
                                 className={`absolute top-10 left-3 z-50 w-auto min-w-56  
       bg-gray-900 text-white shadow-lg transform transition-all duration-300 ease-out 

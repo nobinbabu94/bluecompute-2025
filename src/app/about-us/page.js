@@ -20,7 +20,7 @@ export const metadata = constructMetadata({
 const page = () => {
     return (
         <div className=" text-white font-sans flex flex-col pb-32">
-              
+
             <section className="relative flex flex-col justify-center items-center w-full h-[88vh]  bg-black px-4">
                 <h1 className="text-6xl ">
                     About us
@@ -45,7 +45,8 @@ const page = () => {
                         width={500}
                         height={500}
                         alt="logo"
-                        className="w-60 pb-4" />
+                        className="w-52 md:w-60 mb-8 drop-shadow-lg"
+                    />
                     <p className="text-gray-500 text-2xl md:max-w-7xl">
                         <span className="font-semibold text-3xl text-gray-300">At BlueCompute, we don’t just build software - we craft digital possibilities. </span>
                         By merging imagination with precision, we turn bold ideas into transformative solutions that
@@ -60,9 +61,9 @@ const page = () => {
                 <div className="flex flex-col px-6 py-12 space-y-8 max-w-sm bg-gray-800 text-center text-white aspect-[1] rounded-[50%/20%]">
                     <h3 className="text-3xl font-semibold text-blue-200">Our Mission</h3>
                     <p className="text-xl text-gray-400">
-                        Our mission is to empower businesses with next-generation AI solutions that simplify sales and 
-                        distribution management. We strive to make advanced technology accessible and practical, enabling 
-                        organizations to optimize operations, gain actionable insights, and achieve sustainable growth with 
+                        Our mission is to empower businesses with next-generation AI solutions that simplify sales and
+                        distribution management. We strive to make advanced technology accessible and practical, enabling
+                        organizations to optimize operations, gain actionable insights, and achieve sustainable growth with
                         confidence
                     </p>
                 </div>
@@ -70,9 +71,9 @@ const page = () => {
                 <div className="flex flex-col px-6 py-12 space-y-8 max-w-sm bg-gray-800 text-center text-white aspect-[1] rounded-[50%/20%]">
                     <h3 className="text-3xl font-semibold text-blue-200">The Outreach Team</h3>
                     <p className="text-xl text-gray-400">
-                        At the heart of our success is a team that blends deep domain knowledge with cutting-edge technology 
-                        expertise. With years of experience in sales and distribution software, salesforce automation, 
-                        and retail management solutions, our specialists design systems that are powerful, scalable, 
+                        At the heart of our success is a team that blends deep domain knowledge with cutting-edge technology
+                        expertise. With years of experience in sales and distribution software, salesforce automation,
+                        and retail management solutions, our specialists design systems that are powerful, scalable,
                         and built to meet the unique demands of the industry.
                     </p>
                 </div>
