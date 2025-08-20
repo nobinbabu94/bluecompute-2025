@@ -155,7 +155,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
           />
           <Headers
-            text="Let’s talk today and explore how Outreach software can drive growth, sharpen visibility, and take your business higher."
+            text="Let’s talk today and explore how Bluecompute software can drive growth, sharpen visibility, and take your business higher."
             element="h1"
             classname={'bg-gradient-to-r from-blue-300 via-white to-pink-300 bg-clip-text text-transparent  max-w-xl pt-4 text-lg'}
             initial={{ opacity: 0, y: 50 }}

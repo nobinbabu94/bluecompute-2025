@@ -69,7 +69,7 @@ const page = () => {
                 </div>
 
                 <div className="flex flex-col px-6 py-12 space-y-8 max-w-sm bg-gray-800 text-center text-white aspect-[1] rounded-[50%/20%]">
-                    <h3 className="text-3xl font-semibold text-blue-200">The Outreach Team</h3>
+                    <h3 className="text-3xl font-semibold text-blue-200">The Bluecompute Team</h3>
                     <p className="text-xl text-gray-400">
                         At the heart of our success is a team that blends deep domain knowledge with cutting-edge technology
                         expertise. With years of experience in sales and distribution software, salesforce automation,
