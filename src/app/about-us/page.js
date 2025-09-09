@@ -57,35 +57,36 @@ const page = () => {
 
                 </div>
             </section>
-            <section className="py-16 flex md:flex-row flex-col gap-4 justify-center w-full px-4">
-                <div className="flex flex-col px-6 py-16 space-y-5 max-w-sm bg-gray-800 backdrop-blur-2xl text-center text-white aspect-[1] rounded-[50%/20%]">
-                    <h3 className="text-3xl font-semibold text-blue-200">Our Mission</h3>
-                    <p className="text-xl text-gray-400">
-                        Our mission is to empower businesses with next-generation AI solutions that simplify sales and
-                        distribution management. We strive to make advanced technology accessible and practical, enabling
-                        organizations to optimize operations, gain actionable insights, and achieve sustainable growth with
-                        confidence
-                    </p>
-                </div>
+            <section className="py-16 flex md:flex-row flex-col gap-4 justify-center items-stretch w-full px-4">
+  <div className="flex flex-col flex-1 px-6 py-16 space-y-5 max-w-sm bg-gray-800 backdrop-blur-2xl text-center text-white rounded-[50%/20%]">
+    <h3 className="text-3xl font-semibold text-blue-200">Our Mission</h3>
+    <p className="text-xl text-gray-400">
+      Our mission is to empower businesses with next-generation AI solutions that simplify sales and
+      distribution management. We strive to make advanced technology accessible and practical, enabling
+      organizations to optimize operations, gain actionable insights, and achieve sustainable growth with
+      confidence.
+    </p>
+  </div>
 
-                <div className="flex flex-col px-6 py-16 space-y-5 max-w-sm bg-gray-800 text-center text-white aspect-[1] rounded-[50%/20%]">
-                    <h3 className="text-3xl font-semibold text-blue-200">The Bluecompute Team</h3>
-                    <p className="text-xl text-gray-400 pb-4">
-                        At the heart of our success is a team that blends deep domain knowledge with cutting-edge technology
-                        expertise. With years of experience in sales and distribution software, salesforce automation,
-                        and retail management solutions, our specialists design systems that are powerful, scalable,
-                        and built to meet the unique demands of the industry.
-                    </p>
-                </div>
+  <div className="flex flex-col flex-1 px-6 py-16 space-y-5 max-w-sm bg-gray-800 text-center text-white rounded-[50%/20%]">
+    <h3 className="text-3xl font-semibold text-blue-200">The Bluecompute Team</h3>
+    <p className="text-xl text-gray-400 pb-4">
+      At the heart of our success is a team that blends deep domain knowledge with cutting-edge technology
+      expertise. With years of experience in sales and distribution software, salesforce automation,
+      and retail management solutions, our specialists design systems that are powerful, scalable,
+      and built to meet the unique demands of the industry.
+    </p>
+  </div>
 
-                <div className="flex flex-col px-6 py-16 space-y-5 max-w-sm bg-gray-800 text-center text-white aspect-[1] rounded-[50%/20%]">
-                    <h3 className="text-3xl font-semibold text-blue-200">Our Values</h3>
-                    <p className="text-xl text-gray-400">
-                        We value trust, transparency, and teamwork. Innovation guides us, integrity grounds us,
-                        and our customers' success is at the heart of everything we do.
-                    </p>
-                </div>
-            </section>
+  <div className="flex flex-col flex-1 px-6 py-16 space-y-5 max-w-sm bg-gray-800 text-center text-white rounded-[50%/20%]">
+    <h3 className="text-3xl font-semibold text-blue-200">Our Values</h3>
+    <p className="text-xl text-gray-400">
+      We value trust, transparency, and teamwork. Innovation guides us, integrity grounds us,
+      and our customers' success is at the heart of everything we do.
+    </p>
+  </div>
+</section>
+
 
             <section className=" rounded-4xl pt-32 flex md:flex-row flex-col items-stretch justify-center w-full px-4  md:pt-16  gap-y-4">
                 <div className="md:w-[50%] w-full bg-black flex flex-col justify-center space-y-6 items-start md:px-4  py-4 px-4">
