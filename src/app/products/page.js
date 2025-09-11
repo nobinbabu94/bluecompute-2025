@@ -92,65 +92,72 @@ const page = () => {
                     </div>
                 </div>
             </section>
-            <section className="pt-24 px-6 md:px-20 flex flex-col ">
-                {/* <Image
-                    src={'/revealnext-logo-black.webp'}
+            <section className="pt-24 px-6 md:px-20 flex flex-col">
+    {/* <Image
+        src={'/revealnext-logo-black.webp'}
+        width={500}
+        height={500}
+        alt="RevealNext Logo"
+        className="w-52 md:w-60 mb-8 drop-shadow-lg"
+    /> */}
+    
+    {/* Main header section - stack on mobile, side-by-side on desktop */}
+    <div className="flex flex-col lg:flex-row w-full lg:justify-between gap-6 lg:gap-8 mb-10">
+        <h2 className="text-xl md:text-3xl lg:text-4xl font-bold text-blue-500 leading-snug max-w-lg mb-4 lg:mb-6">
+            AI Merchandising Assistant {" "}
+            <span className="text-gray-600 font-normal">Get answers from your store data</span>
+        </h2>
+        <p className="text-base md:text-lg lg:text-xl text-gray-500 max-w-xl lg:pt-5">
+            Meet your intelligent retail partner. With the AI Merchandising Assistant, you can upload your {" "}
+            <span className="font-semibold text-gray-600">PSA files</span>.
+            and instantly unlock insights hidden inside them. No more manual reviews or waiting for reports — the assistant reads your planograms, understands the data, and answers your questions in real time.
+        </p>
+    </div>
+
+    {/* Content card */}
+    <div className="flex flex-col rounded-2xl shadow-xl p-6 md:p-10 lg:p-14 w-full text-left">
+        <p className="text-lg md:text-xl text-gray-800 mb-6 md:mb-8 font-medium leading-relaxed">
+            Whether you want to know about shelf execution, product availability, performance gaps, or missing planograms, the assistant delivers accurate, actionable responses directly from your own data.
+        </p>
+        
+        {/* Features and image - stack on mobile, side-by-side on desktop */}
+        <div className="flex flex-col lg:flex-row lg:justify-between gap-6 lg:gap-8">
+            <ul className="space-y-4 text-gray-800 text-base md:text-lg flex-1">
+                <li className="flex items-start space-x-3">
+                    <span className="text-blue-400 mt-1 flex-shrink-0">✔</span>
+                    <span>Upload PSA Files → Quickly upload your planogram or PSA files into the system.</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                    <span className="text-blue-400 mt-1 flex-shrink-0">✔</span>
+                    <span>Automated Processing → The assistant parses and processes your data using AI, saving hours of manual effort.</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                    <span className="text-blue-400 mt-1 flex-shrink-0">✔</span>
+                    <span>Ask Questions → Interact naturally — ask about product placement, availability, or performance.</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                    <span className="text-blue-400 mt-1 flex-shrink-0">✔</span>
+                    <span>Instant Answers → Get accurate responses and insights derived directly from your uploaded PSA file.</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                    <span className="text-blue-400 mt-1 flex-shrink-0">✔</span>
+                    <span>Data-Driven Decisions → Turn complex planogram data into clear, actionable insights for your merchandising team.</span>
+                </li>
+            </ul>
+
+            {/* Image container with responsive sizing */}
+            <div className="flex justify-center lg:justify-end lg:flex-shrink-0">
+                <Image
+                    src={'/pas-data-assitant.png'}
+                    alt="AI Assistant"
                     width={500}
                     height={500}
-                    alt="RevealNext Logo"
-                    className="w-52 md:w-60 mb-8 drop-shadow-lg"
-                /> */}
-                <div className="flex w-full justify-between">
-                    <h2 className="text-xl md:text-4xl font-bold text-blue-500 leading-snug max-w-lg mb-6">
-                        AI Merchandising Assistant {" "}
-                        <span className=" text-gray-600 font-normal">Get answers from your store data</span>
-                    </h2>
-                    <p className="text-lg md:text-xl text-gray-500 max-w-xl mb-10 pt-5">
-                        Meet your intelligent retail partner. With the AI Merchandising Assistant, you can upload your {" "}
-                        <span className="font-semibold text-gray-600">PSA files</span>.
-                        and instantly unlock insights hidden inside them. No more manual reviews or waiting for reports — the assistant reads your planograms, understands the data, and answers your questions in real time.
-                    </p>
-                </div>
-
-                <div className="flex flex-col  rounded-2xl shadow-xl p-10 md:p-14 w-full  text-left ">
-                    <p className="text-xl text-gray-800 mb-8 font-medium leading-relaxed">
-                        Whether you want to know about shelf execution, product availability, performance gaps, or missing planograms, the assistant delivers accurate, actionable responses directly from your own data.
-                    </p>
-                    <div className="flex justify-between gap-2">
-
-                        <ul className="space-y-4 text-gray-800 text-lg">
-                            <li className="flex items-start space-x-3">
-                                <span className="text-blue-400 mt-1">✔</span>
-                                <span>IUpload PSA Files → Quickly upload your planogram or PSA files into the system.</span>
-                            </li>
-                            <li className="flex items-start space-x-3">
-                                <span className="text-blue-400 mt-1">✔</span>
-                                <span>Automated Processing → The assistant parses and processes your data using AI, saving hours of manual effort.</span>
-                            </li>
-                            <li className="flex items-start space-x-3">
-                                <span className="text-blue-400 mt-1">✔</span>
-                                <span>Ask Questions → Interact naturally — ask about product placement, availability, or performance.</span>
-                            </li>
-                            <li className="flex items-start space-x-3">
-                                <span className="text-blue-400 mt-1">✔</span>
-                                <span>Instant Answers → Get accurate responses and insights derived directly from your uploaded PSA file.</span>
-                            </li>
-                            <li className="flex items-start space-x-3">
-                                <span className="text-blue-400 mt-1">✔</span>
-                                <span>Data-Driven Decisions → Turn complex planogram data into clear, actionable insights for your merchandising team.</span>
-                            </li>
-                        </ul>
-
-                        <Image
-                            src={'/pas-data-assitant.png'}
-                            alt="Ai Assitant"
-                            width={500}
-                            height={500}
-                        />
-                    </div>
-
-                </div>
-            </section>
+                    className="w-full max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl h-auto"
+                />
+            </div>
+        </div>
+    </div>
+</section>
 
         </div>
     )
