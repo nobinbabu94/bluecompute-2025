@@ -71,14 +71,23 @@ const Navbar = () => {
         setSolutions(false);
     };
 
+    // Handle dropdown with proper mouse events
+    const handleDropdownMouseEnter = () => {
+        setIsDropdownOpen(true);
+    };
+
+    const handleDropdownMouseLeave = () => {
+        setIsDropdownOpen(false);
+    };
+
     return (
         <div className="fixed top-0 left-0 w-full z-50 bg-black">
             <nav
-                className={`w-full mx-auto transition-all duration-500 ease-out font-mono text-gray-700`}
+                className={`w-full mx-auto h-20 md:h-20  transition-all duration-500 ease-out font-mono text-gray-700`}
                 role="navigation"
                 aria-label="Main navigation"
             >
-                <div className="flex items-center justify-between h-20 md:h-20 px-4 sm:px-6 lg:px-8 relative">
+                <div className="w-full h-full flex items-center justify-between px-4 sm:px-6 lg:px-8 relative">
 
                     <div className="flex items-center relative z-10">
                         <Link href="/" className="transition-transform duration-300 hover:scale-105">
@@ -94,9 +103,9 @@ const Navbar = () => {
                             />
                         </Link>
                     </div>
-                    <div className="hidden lg:flex items-center space-x-6 z-20">
+                    <div className="hidden lg:flex items-center space-x-6 z-20 h-full">
                         <Link href='/' title='Home Bluecompute'
-                            className={`cursor-pointer relative uppercase  group py-2 px-3 transition-all duration-200 ${pathname === '/' ? 'underline underline-offset-8 text-white font-semibold ' : 'text-white'
+                            className={`cursor-pointer relative uppercase h-full flex items-center group  px-3 transition-all duration-200 ${pathname === '/' ? 'underline underline-offset-8 text-white font-semibold ' : 'text-white'
                                 }`}
                         >
                             Home
@@ -105,28 +114,30 @@ const Navbar = () => {
 
 
                         <Link href='/about-us/' title='About Bluecompute'
-                            className={`cursor-pointer relative  uppercase group py-2 px-3 transition-all duration-200 ${pathname === '/about-us/' ? 'underline underline-offset-8 text-white font-semibold ' : 'text-white'
+                            className={`cursor-pointer relative h-full flex items-center  uppercase group  px-3 transition-all duration-200 ${pathname === '/about-us/' ? 'underline underline-offset-8 text-white font-semibold ' : 'text-white'
                                 }`}
                         >
                             About us
 
                         </Link>
                         <Link href={'/services'} title="About us Bluecompute"
-                            className={`cursor-pointer relative  uppercase group py-2 px-3 transition-all duration-200 ${pathname === '/services/' ? 'underline underline-offset-8 text-white font-semibold ' : 'text-white'}`}>
+                            className={`cursor-pointer relative h-full flex items-center uppercase group  px-3 transition-all duration-200 ${pathname === '/services/' ? 'underline underline-offset-8 text-white font-semibold ' : 'text-white'}`}>
 
                             Services
 
                         </Link>
+
+                        {/* Products dropdown container - this wraps both the link and dropdown */}
                         <div
-                            className="relative"
-                            onMouseEnter={() => setIsDropdownOpen(true)}
-                            onMouseLeave={() => setIsDropdownOpen(false)}
+                            className="relative h-full"
+                            onMouseEnter={handleDropdownMouseEnter}
+                            onMouseLeave={handleDropdownMouseLeave}
                         >
                             <Link
                                 href={'/products'}
                                 title="Products Bluecompute"
-                                className={`flex items-center  gap-2 cursor-pointer relative uppercase group py-2 px-3 transition-all duration-200 
-      ${pathname === '/products'
+                                className={`flex items-center h-full gap-2 cursor-pointer relative uppercase group px-3 transition-all duration-200 
+                                    ${pathname === '/products'
                                         ? 'underline underline-offset-8 text-white font-semibold'
                                         : 'text-white'
                                     }`}
@@ -142,40 +153,126 @@ const Navbar = () => {
                                 />
                             </Link>
 
+                            {/* Full-width Dropdown menu */}
                             <div
-                                className={`absolute top-10 left-3 z-50 w-auto min-w-56  
-      bg-gray-900 text-white shadow-lg transform transition-all duration-300 ease-out 
-      ${isDropdownOpen
-                                        ? 'opacity-100 translate-y-0 scale-100'
-                                        : 'opacity-0 -translate-y-2 scale-95 pointer-events-none'
+                                className={`fixed top-20 left-0 w-full z-40 
+                                bg-gray-900 text-white shadow-2xl transform transition-all duration-300 ease-out border-t border-gray-700
+                                    ${isDropdownOpen
+                                        ? 'opacity-100 translate-y-0'
+                                        : 'opacity-0 -translate-y-4 pointer-events-none'
                                     }`}
                             >
-                                <ul className="py-2">
-                                    <li className="px-4 py-2 hover:text-blue-300 transition-colors">
-                                        <a
-                                            href="https://revealnext.com/"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="flex items-center space-x-2"
-                                        >
-                                            <span>RevealNext</span>
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                className="w-3 h-3"
-                                                fill="none"
-                                                viewBox="0 0 24 24"
-                                                stroke="currentColor"
-                                                strokeWidth={2}
-                                            >
-                                                <path
-                                                    strokeLinecap="round"
-                                                    strokeLinejoin="round"
-                                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                                                />
-                                            </svg>
-                                        </a>
-                                    </li>
-                                </ul>
+                                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-8">
+
+                                        {/* Featured Products */}
+                                        <div>
+                                            <h3 className="text-lg font-semibold mb-4 text-blue-300">Featured Products</h3>
+                                            <div className="flex space-x-3">
+                                                <a
+                                                    href="https://revealnext.com/"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800 transition-colors group"
+                                                >
+                                                    <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center">
+                                                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                                            <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
+                                                        </svg>
+                                                    </div>
+                                                    <div className="flex-1">
+                                                        <div className="flex items-center space-x-2">
+                                                            <span className="font-medium group-hover:text-blue-300">RevealNext</span>
+                                                            <svg
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                className="w-3 h-3"
+                                                                fill="none"
+                                                                viewBox="0 0 24 24"
+                                                                stroke="currentColor"
+                                                                strokeWidth={2}
+                                                            >
+                                                                <path
+                                                                    strokeLinecap="round"
+                                                                    strokeLinejoin="round"
+                                                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                                                                />
+                                                            </svg>
+                                                        </div>
+                                                        <p className="text-sm text-gray-400">Advanced analytics platform</p>
+                                                    </div>
+                                                </a>
+
+                                                <div className="p-3 rounded-lg hover:bg-gray-800 transition-colors group cursor-pointer">
+                                                    <div className="flex items-center space-x-3">
+                                                        <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center">
+                                                            <svg
+                                                                className="w-5 h-5"
+                                                                viewBox="0 0 24 24"
+                                                                fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                role="img"
+                                                                aria-hidden="false"
+                                                            >
+                                                                <rect x="3" y="4" width="18" height="12" rx="3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                                                <circle cx="9" cy="9" r="0.9" fill="currentColor" />
+                                                                <circle cx="15" cy="9" r="0.9" fill="currentColor" />
+                                                                <path d="M8 15h8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                                                <path d="M3 10v2a5 5 0 005 5h0" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                                                <path d="M21 10v2a5 5 0 01-5 5h0" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                                                <circle cx="7" cy="2.8" r="0.9" fill="currentColor" />
+                                                            </svg>
+
+                                                        </div>
+                                                        <div>
+                                                            <div className="font-medium group-hover:text-blue-300">AI Merchandising Assistant</div>
+                                                            <p className="text-sm text-gray-400">Get answers from your store data</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div className="p-3 rounded-lg hover:bg-gray-800 transition-colors group cursor-pointer">
+                                                    <div className="flex items-center space-x-3">
+                                                        <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center">
+                                                            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                            </svg>
+                                                        </div>
+                                                        <div>
+                                                            <div className="font-medium group-hover:text-blue-300">SecureVault</div>
+                                                            <p className="text-sm text-gray-400">Enterprise security suite</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    {/* Bottom CTA Section */}
+                                    <div className="mt-8 pt-8 border-t border-gray-700">
+                                        <div className="flex flex-col md:flex-row items-center justify-between">
+                                            <div>
+                                                <h4 className="text-lg font-semibold mb-2">Ready to get started?</h4>
+                                                <p className="text-gray-400">Explore our full range of products and solutions.</p>
+                                            </div>
+                                            <div className="flex space-x-4 mt-4 md:mt-0">
+                                                <Link
+                                                onClick={()=>setIsDropdownOpen(false)}
+                                                    href="/products"
+                                                    className="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-lg font-medium transition-colors"
+                                                >
+                                                    View All Products
+                                                </Link>
+                                                {/* <Link
+                                                    href="/contact"
+                                                    className="border border-gray-600 hover:border-gray-500 px-6 py-2 rounded-lg font-medium transition-colors"
+                                                >
+                                                    Get Demo
+                                                </Link> */}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -216,6 +313,7 @@ const Navbar = () => {
                         </button>
                     </div>
                 </div>
+
                 <div
                     className={`lg:hidden bg-gray-600 mobile-menu-container rounded-b-xl transition-all duration-500 ease-out 
     ${showMenu ? "max-h-screen opacity-100 visible" : "max-h-0 opacity-0 invisible"} 
