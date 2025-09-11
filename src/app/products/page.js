@@ -101,11 +101,11 @@ const page = () => {
                     className="w-52 md:w-60 mb-8 drop-shadow-lg"
                 /> */}
                 <div className="flex w-full justify-between">
-                    <h2 className="text-xl md:text-4xl font-bold text-gray-800 leading-snug max-w-lg mb-6">
+                    <h2 className="text-xl md:text-4xl font-bold text-blue-500 leading-snug max-w-lg mb-6">
                         AI Merchandising Assistant {" "}
-                        <span className="text-blue-500 font-normal">Get answers from your store data</span>
+                        <span className=" text-gray-600 font-normal">Get answers from your store data</span>
                     </h2>
-                    <p className="text-lg md:text-xl text-gray-500 max-w-xl mb-10">
+                    <p className="text-lg md:text-xl text-gray-500 max-w-xl mb-10 pt-5">
                         Meet your intelligent retail partner. With the AI Merchandising Assistant, you can upload your {" "}
                         <span className="font-semibold text-gray-600">PSA files</span>.
                         and instantly unlock insights hidden inside them. No more manual reviews or waiting for reports — the assistant reads your planograms, understands the data, and answers your questions in real time.
