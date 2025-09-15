@@ -2,15 +2,16 @@ import Link from 'next/link'
 
 const Footer = () => {
   const footerLinks = {
-   
+
     Company: [
       { name: 'Home', href: '/' },
       { name: 'About', href: '/about' },
       { name: 'Contact', href: '/contact' },
-       { name: 'Products', href: '/products' },
-        { name: 'Services', href: '/services' }
+      { name: 'Products', href: '/products' },
+      { name: 'Services', href: '/services' },
+      { name: 'Careers', href: '/careers' }
     ],
-    
+
     // Legal: [
     //   { name: 'Privacy Policy', href: '/privacy-policy' },
     //   { name: 'Terms of Service', href: '/#' },
@@ -26,15 +27,15 @@ const Footer = () => {
             <Link href="/" className="flex items-center space-x-3 mb-4">
               <div className=" bg-gradient-to-r from-primary-500 to-accent-500 rounded-lg flex items-center justify-center">
                 <img
-                                src="/BlueCompute_large-logo.png"
-                                alt="Bluecompute Logo"
-                                className={`transition-all duration-500 w-36 md:w-96 lg:w-52 `}
-                            />
+                  src="/BlueCompute_large-logo.png"
+                  alt="Bluecompute Logo"
+                  className={`transition-all duration-500 w-36 md:w-96 lg:w-52 `}
+                />
               </div>
               {/* <span className="text-xl font-bold gradient-text">Bluecompute</span> */}
             </Link>
             <p className="text-gray-600 mb-6 max-w-md">
-              Democratizing planogram analysis for everyone with cutting-edge AI technology. 
+              Democratizing planogram analysis for everyone with cutting-edge AI technology.
               Transform weeks of work into minutes of insight.
             </p>
             <div className="flex space-x-4">
@@ -58,13 +59,12 @@ const Footer = () => {
               </a>
             </div>
           </div>
-
           {Object.entries(footerLinks).map(([category, links]) => (
-            <div key={category}>
+            <div key={category} >
               <h3 className="text-sm font-semibold text-gray-900 tracking-wider uppercase mb-4">
                 {category}
               </h3>
-              <ul className="space-y-2">
+              <ul className="space-y-2 grid grid-cols-2">
                 {links.map((link) => (
                   <li key={link.name}>
                     <Link
@@ -79,7 +79,6 @@ const Footer = () => {
             </div>
           ))}
         </div>
-
         <div className="mt-12 pt-8 border-t border-gray-200">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-600 text-sm lg:text-lg">
