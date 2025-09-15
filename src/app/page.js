@@ -6,6 +6,7 @@ import ScrollReveal from "./components/testcases/ScrollReveal";
 import React from "react";
 import LogoImageComponent from "./components/reuse/LogoImageComponent";
 import WhyChoose from "./components/reuse/WhyChoose";
+import FAQ from "./components/faq/FAQ";
 
 
 export const metadata = constructMetadata({
@@ -373,6 +374,45 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <section className="flex flex-col justify-around items-center w-full md:gap-0 gap-8 px-4">
+        <div className="lg:max-w-4xl text-center py-12">
+          <Headers
+            text="Access more flexible reports designed to cover key business workflows."
+            classname={"text-gray-800 text-3xl md:text-4xl font-semibold max-w-full"}
+            element="h3"
+
+          />
+        </div>
+        <div className="mx-auto max-w-4xl px-6  grid gap-10 md:grid-cols-1 items-center">
+          <div className="space-y-5">
+            <p className="text-gray-600">
+              This report highlights sales results from promotional campaigns, making it easy to assess
+              performance across different levels — whether by individual promo, product category,
+              or specific SKU. These insights help you optimize promotions and boost ROI.
+
+            </p>
+
+            <p className="text-gray-600">
+              This report reviews the results of each store as well as the chain overall.
+              It includes key sales metrics to assess profitability and measure each store’s impact on total revenue.
+            </p>
+          </div>
+
+
+          {/* <div className="w-full flex justify-center">
+            <Image
+              width={500}
+              height={500}
+              src={'/category-management.webp'}
+              alt={'Analyze Data'}
+              className="w-96 h-auto rounded-xl shadow-lg ring-1 ring-gray-200 object-cover"
+            />
+            
+
+          </div> */}
+        </div>
+      </section>
       <section className="flex flex-col justify-center items-center w-full px-4 pt-32 rounded-xl">
 
         <Headers
@@ -448,7 +488,11 @@ export default function Home() {
           />
         </div>
       </section> */}
-      <section className="flex flex-col bg-black justify-center items-center w-full px-4 mt-32 py-32 rounded-4xl ">
+      <section className="flex flex-col bg-black
+       justify-center items-center w-full px-4 mt-32 py-16 ">
+        <FAQ />
+      </section>
+      <section className="flex flex-col bg-black  justify-center items-center w-full px-4 pb-32 pt-16 rounded-b-4xl border-t border-gray-800">
         <h3 className="text-2xl md:text-4xl  font-semibold ">
           Get early access
         </h3>
@@ -464,6 +508,7 @@ export default function Home() {
           </button>
         </form>
       </section>
+
     </div >
   );
 }

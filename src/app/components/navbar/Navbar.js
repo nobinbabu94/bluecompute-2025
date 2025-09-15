@@ -202,7 +202,7 @@ const Navbar = () => {
                                                     </div>
                                                 </a>
 
-                                                <div className="p-3 rounded-lg hover:bg-gray-800 transition-colors group cursor-pointer">
+                                                {/* <div className="p-3 rounded-lg hover:bg-gray-800 transition-colors group cursor-pointer">
                                                     <div className="flex items-center space-x-3">
                                                         <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center">
                                                             <svg
@@ -228,9 +228,9 @@ const Navbar = () => {
                                                             <p className="text-sm text-gray-400">Get answers from your store data</p>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </div> */}
 
-                                                <div className="p-3 rounded-lg hover:bg-gray-800 transition-colors group cursor-pointer">
+                                                {/* <div className="p-3 rounded-lg hover:bg-gray-800 transition-colors group cursor-pointer">
                                                     <div className="flex items-center space-x-3">
                                                         <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center">
                                                             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -242,7 +242,7 @@ const Navbar = () => {
                                                             <p className="text-sm text-gray-400">Enterprise security suite</p>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </div> */}
                                             </div>
                                         </div>
 
