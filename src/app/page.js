@@ -177,10 +177,8 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className="flex flex-col  items-center w-full px-4 pt-32">
-        {/* <h3 className="text-4xl font-semibold text-gray-800 ">
-          Proudly Trusted by Top Retail Stores Around You
-        </h3> */}
+      {/* <section className="flex flex-col  items-center w-full px-4 pt-32">
+       
         <Headers
           text="Proudly Trusted by Top Retail Stores Around You"
           classname={"text-gray-800 text-2xl md:text-4xl max-w-full font-semibold"}
@@ -199,7 +197,7 @@ export default function Home() {
           }
         </div>
 
-      </section >
+      </section > */}
       <section className="flex flex-col justify-center items-center w-full px-4 pt-32 rounded-xl">
         <Headers
           text="Why Choose us ?"
@@ -249,8 +247,6 @@ export default function Home() {
               </li>
             </ul>
           </div>
-
-          {/* Image area (free space reserved) */}
           <div className="w-full">
 
             <Image
@@ -266,7 +262,6 @@ export default function Home() {
       </section>
       <section className="flex md:flex-row flex-col justify-around items-center w-full md:gap-0 gap-8 px-4 ">
         <div className="mx-auto max-w-6xl px-6 py-12 grid gap-10 md:grid-cols-2 items-center">
-          {/* Text */}
           <div className="space-y-5">
             <Headers
               text="Integrated Solutions, Flexible Deployment"
@@ -303,8 +298,6 @@ export default function Home() {
               </li>
             </ul>
           </div>
-
-          {/* Image area (free space reserved) */}
           <div className="w-full">
 
             <Image
@@ -320,7 +313,6 @@ export default function Home() {
       </section>
       <section className="flex md:flex-row flex-col justify-around items-center w-full md:gap-0 gap-8 px-4">
         <div className="mx-auto max-w-6xl px-6 py-12 grid gap-10 md:grid-cols-2 items-center">
-          {/* Text */}
           <div className="space-y-5">
             <Headers
               text="Powerful Features for Modern Retail"
@@ -355,8 +347,6 @@ export default function Home() {
               </li>
             </ul>
           </div>
-
-          {/* Image area (free space reserved) */}
           <div className="w-full flex justify-center">
             <Image
               width={500}
@@ -398,7 +388,6 @@ export default function Home() {
               It includes key sales metrics to assess profitability and measure each store’s impact on total revenue.
             </p>
           </div>
-
 
           {/* <div className="w-full flex justify-center">
             <Image
