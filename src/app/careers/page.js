@@ -64,15 +64,17 @@ const page = () => {
                         </ul>
                     </div>
 
-                    <div className="relative bg-gray-800 text-white rounded-2xl shadow-lg p-6 flex flex-col justify-center space-y-4">
-                        <h5 className="text-xl font-semibold absolute top-6">Job Summary</h5>
-                        <div className="flex flex-col space-y-6">
-                            <span className="text-lg">- San Francisco</span>
-                            <span className="text-lg">- Full Time</span>
+                    <div className="relative  text-white  p-14 flex  justify-center space-y-4">
+                        <div className="relative flex flex-col items-centerj justify-center bg-gray-800 p-4 rounded-2xl shadow-lg ">
+                            <h5 className="text-xl font-semibold absolute top-6">Job Summary</h5>
+                            <div className="flex flex-col space-y-6">
+                                <span className="text-lg">- San Francisco</span>
+                                <span className="text-lg">- Full Time</span>
+                            </div>
+                            <p className="text-gray-200 pt-6 max-w-72 pl-3 relative before:content-['-'] before:absolute before:left-0">
+                                Interested candidates can send their resume to sales@bluecompute.com
+                            </p>
                         </div>
-                        <p className="text-gray-200 max-w-72 pl-4 relative before:content-['-'] before:absolute before:left-0">
-                            Interested candidates can send their resume to sales@bluecompute.com
-                        </p>
                     </div>
 
                 </div>
